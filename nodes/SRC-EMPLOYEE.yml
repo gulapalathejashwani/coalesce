@@ -1,0 +1,111 @@
+fileVersion: 1
+id: e2860870-a031-482b-8c9a-6e5bce2781e9
+name: EMPLOYEE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac97b1c2-16e4-4cf9-a0bc-935e3e377a6e
+          stepCounter: e2860870-a031-482b-8c9a-6e5bce2781e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: EMP_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7e76c97-2e44-4f89-8172-874fd6256a3e
+          stepCounter: e2860870-a031-482b-8c9a-6e5bce2781e9
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: EMP_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c83beb60-2666-4e77-a9ce-0bb6ff5211eb
+          stepCounter: e2860870-a031-482b-8c9a-6e5bce2781e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DEPT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffd2ef29-d459-471a-9dc5-bf0b7d2b6e7b
+          stepCounter: e2860870-a031-482b-8c9a-6e5bce2781e9
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DOJ
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 598f995a-83bf-4efe-8b63-421855b12e11
+          stepCounter: e2860870-a031-482b-8c9a-6e5bce2781e9
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: EMPLOYEE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

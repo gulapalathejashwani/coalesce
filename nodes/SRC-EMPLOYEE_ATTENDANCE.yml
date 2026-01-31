@@ -1,0 +1,92 @@
+fileVersion: 1
+id: b1336def-65e3-4f52-a936-604e039199a9
+name: EMPLOYEE_ATTENDANCE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0111ab55-bede-4982-9d14-8a5833d7a37e
+          stepCounter: b1336def-65e3-4f52-a936-604e039199a9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ATTENDANCE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e82d67c4-b6df-4d9f-a848-006127bef526
+          stepCounter: b1336def-65e3-4f52-a936-604e039199a9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: EMP_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8c56cf0-95d8-40e0-9b8c-66013e59336c
+          stepCounter: b1336def-65e3-4f52-a936-604e039199a9
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: WORK_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92930b0d-ddae-4e83-95ff-442ea4e7d575
+          stepCounter: b1336def-65e3-4f52-a936-604e039199a9
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: EMPLOYEE_ATTENDANCE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

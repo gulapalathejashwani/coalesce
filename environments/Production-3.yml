@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  SRC:
+    database: COALESCE_DB
+    schema: RAW
+  TARGET:
+    database: COALESCE_DB
+    schema: TARGET
+name: Production
+type: Environment
