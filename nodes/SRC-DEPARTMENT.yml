@@ -68,8 +68,8 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-schema: ""
-sqlType: Source
-type: sourceInput
-version: 1
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
 type: Node
