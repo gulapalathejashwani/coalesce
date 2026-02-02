@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 972ae788-e7b3-4411-b873-a42f8d12be99
-name: STG_DEPARTMENT
+id: DT
+name: D_TMENT
 operation:
   config:
     insertStrategy: INSERT
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ef60641c-731b-4bd7-85c4-62fb382e90f1
-          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+          columnCounter: C_1
+          stepCounter: DT
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 905ad08a-1016-4b3a-82b5-5023cffda4bf
+              - columnCounter: C_2
                 stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e143be87-ae1f-43a6-9e1d-663ad6dd23d6
-          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+          columnCounter: C_3
+          stepCounter: DT
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: bb10c54e-d637-43bc-a05b-29b48371b14d
+              - columnCounter: C_4
                 stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bf517557-e303-4ead-8972-8b642d15d9d9
-          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+          columnCounter: C_5
+          stepCounter: DT
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -56,7 +56,7 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 602d85a2-b0a6-44da-a4f0-f802ad591db7
+              - columnCounter: C_6
                 stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
             transform: ""
     cteString: ""
@@ -71,9 +71,9 @@ operation:
             nodeName: DEPARTMENT
         join:
           joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
-        name: STG_DEPARTMENT
+        name: D_MENT
         noLinkRefs: []
-  name: STG_DEPARTMENT
+  name: D_MENT
   overrideSQL: false
   schema: ""
   sqlType: Stage
