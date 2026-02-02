@@ -1,6 +1,420 @@
 fileVersion: 1
 id: T1
-name: EMPLOYEE_t1
+name: EMPLOYEE_t1fileVersion: 1
+id: 501fa9e2-62a3-4319-a319-917192cee690
+name: TOP_EMPLOYEE
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc659a51-4576-408e-9add-17a15fcc7f55
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_JOINS1_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ca6bc31-cf10-4c08-9559-8b3b83df5eab
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_EMPLOYEE_SALARY_EMPLOYEE_ATTENDANCE_DEPARTMENT_EMPLOYEE_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a65bc39-5507-47da-a81b-80accf863615
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea5da9b9-d1b0-4669-b574-b5bdfcece475
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: SALARY_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9706279b-76b3-4eb2-bcf0-d0f9bfd44984
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 865b1d54-012a-44b3-9bfb-ee9c83d94f96
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: EMP_ID_S
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77a8700e-c8ed-4454-9579-01f3501d7b04
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: abea9eb9-8a08-49dd-a139-e76dc08426b4
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BASIC_PAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f257ab79-e518-4cac-bcb5-252fd1f5bb44
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e79aac8b-5c3d-4ccd-a8fa-98880b24c01d
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BONUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 010d2897-3c9a-4a81-b2c8-f0015f96af46
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 004ed474-6e50-42f0-ae2b-455de24aa42f
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PAY_MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a15f1558-9f0b-404b-b2bf-4053314a9d97
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bd1ed88-a682-45b2-8201-92c2c0be859f
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ATTENDANCE_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e28469e-5384-4ab1-bad8-88ae2869a14a
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33966dff-dd42-4145-999c-10a93b740eb5
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: EMP_ID_A
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1908bd5-cd05-40cd-bb82-22b093ac33a9
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a7bfd1b-a36f-40a1-b77e-f6b00b19f58f
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: DATE
+        description: ""
+        name: WORK_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f00cf74-87c1-4921-9be5-6df410d365a8
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f00b525b-b128-4560-a866-075d18bde595
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: STATUS_EA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76d2b9c5-401e-43c3-96f2-dd36006dab94
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff774b1a-424e-4c74-979a-5bd0fdb7e59c
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: DEPT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d6b2f1a-2677-40ce-b4eb-490431911c35
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ddd085ce-66b1-42e8-9363-0e3e7cabb522
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DEPT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 051cf9cf-23e1-4183-9e57-1446c5ff88ed
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83787d5d-219b-4ddf-977b-76f940330ea5
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0711d8ef-5416-4dcc-b598-8012bdb61ea4
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81bb9d12-2d34-4536-a620-97d3fd073a95
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: EMP_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61b4de09-9dc2-4216-bb0b-9597630adb0a
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cba9a68d-9c28-4aa2-a34c-1871df3a0376
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: EMP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 945c8500-3208-4162-9936-04d270665106
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ee53442-7e53-483c-8df0-85c66e00c5cb
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: DEPT_ID_E
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a5f4a5c-8524-4724-850f-d3d69757b061
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52bce904-8ca1-4ad8-bb2d-62736f33632a
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DOJ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fea74419-867d-4e24-adec-287531b53935
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbb891f6-94dc-4bf2-8d97-bb8996b91ce3
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: STATUS_E
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96bd2ca8-2596-433c-ac48-4e8daaeb825d
+                stepCounter: bed4d50a-674e-410f-8964-2ce11440d22a
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7a7adaa-c5bb-4aa2-a413-155dfe2e5c99
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b9fd2c4-7ffc-4206-81c1-ed3a02c4ddaf
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 571cc175-901c-461f-b8b5-de00376594ea
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c00bb656-a73c-40f3-a63d-a746e274fb7b
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88a85f72-4321-4e0f-b4c2-f77b236360bd
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72176fc2-9844-450b-b8d7-96fadb7915a4
+          stepCounter: 501fa9e2-62a3-4319-a319-917192cee690
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DIM_JOINS: bed4d50a-674e-410f-8964-2ce11440d22a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DIM_JOINS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'DIM_JOINS') }} "DIM_JOINS" WHERE "BASIC_PAY" = 50000
+        name: TOP_EMPLOYEE
+        noLinkRefs: []
+  name: TOP_EMPLOYEE
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node
 operation:
   config:
     postSQL: ""
