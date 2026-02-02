@@ -1,6 +1,6 @@
 fileVersion: 1
-id: D1
-name: DEPARTMENT
+id: S1 	
+name: DM
 operation:
   database: ""
   deployEnabled: true
@@ -27,7 +27,6 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
@@ -47,7 +46,6 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
@@ -67,7 +65,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: DEPARTMENT
+  name: DM
   schema: ""
   sqlType: Source
   type: sourceInput
