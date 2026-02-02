@@ -1,70 +1,53 @@
 fileVersion: 1
-id: 56ecfc77-3242-4c2c-979a-f824ad2618ad
+id: 7b6c2e92-6e6b-4c6a-a9d2-1f2d0e5d1b3a
 name: DEPARTMENT
+type: Node
+
 operation:
-  database: ""
+  sqlType: Source
+  type: sourceInput
   deployEnabled: true
-  description: ""
-  locationName: SRC
+  locationName: SRC_DB
+  schema: dbo
+  database: <source_database>
+  description: "Migrated from SSIS package 'Load_Department.dtsx' to Snowflake via Coalesce."
+
   metadata:
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 5c510e6e-b170-49fa-8b04-f0a908fe5e6f
-          stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
-        config: {}
+      - name: DEPT_ID
         dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: DEPT_ID
         nullable: false
         primaryKey: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
         uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: c4a1de57-184d-4cb2-bdb9-90d946d3ab58
-          stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
-        config: {}
-        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: DEPT_NAME
-        nullable: true
-        primaryKey: false
+        transform: ""
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 08ad3c64-5eb6-4638-a42d-d3ceb209b3f7
-          stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
-        config: {}
+      - name: DEPT_NAME
         dataType: VARCHAR(50)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
         defaultValue: ""
         description: ""
-        name: LOCATION
-        nullable: true
-        primaryKey: false
+        transform: ""
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-        transform: ""
+      - name: LOCATION
+        dataType: VARCHAR(50)
+        nullable: true
+        primaryKey: false
         uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+
   name: DEPARTMENT
   schema: ""
   sqlType: Source
