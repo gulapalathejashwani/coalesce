@@ -7,7 +7,7 @@ operation:
   type: sourceInput
   deployEnabled: true
   locationName: ""
-  schema: <schema_name>
+  schema: RAW
   database: ""
   description: ""
   metadata:
