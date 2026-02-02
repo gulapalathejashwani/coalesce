@@ -1,6 +1,6 @@
 fileVersion: 1
 id: S2
-name: STG_D
+name: STG_DEPARTMENT
 operation:
   config:
     insertStrategy: INSERT
@@ -63,17 +63,17 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DM: S1
+          DEPARTMENT: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: DM
+            nodeName: DEPARTMENT
         join:
-          joinCondition: FROM {{ ref('SRC', 'DM') }} "DM" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
+          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
         name: STG_D
         noLinkRefs: []
-  name: STG_D
+  name: STG_DEPARTMENT
   overrideSQL: false
   schema: ""
   sqlType: Stage
