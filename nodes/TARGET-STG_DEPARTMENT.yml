@@ -1,0 +1,82 @@
+fileVersion: 1
+id: 972ae788-e7b3-4411-b873-a42f8d12be99
+name: STG_DEPARTMENT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef60641c-731b-4bd7-85c4-62fb382e90f1
+          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: DEPT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 905ad08a-1016-4b3a-82b5-5023cffda4bf
+                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e143be87-ae1f-43a6-9e1d-663ad6dd23d6
+          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DEPT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb10c54e-d637-43bc-a05b-29b48371b14d
+                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf517557-e303-4ead-8972-8b642d15d9d9
+          stepCounter: 972ae788-e7b3-4411-b873-a42f8d12be99
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 602d85a2-b0a6-44da-a4f0-f802ad591db7
+                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DEPARTMENT: 6554094b-9840-4da4-8372-bd9b5222d59e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DEPARTMENT
+        join:
+          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
+        name: STG_DEPARTMENT
+        noLinkRefs: []
+  name: STG_DEPARTMENT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
