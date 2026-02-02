@@ -1,6 +1,7 @@
 fileVersion: 1
 id: D1
 name: DEPARTMENT
+stepCounter: S1
 operation:
   database: ""
   deployEnabled: true
@@ -27,6 +28,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
+
       - acceptedValues:
           strictMatch: true
           values: []
@@ -46,6 +48,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
+
       - acceptedValues:
           strictMatch: true
           values: []
@@ -65,9 +68,8 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: DEPARTMENT
-  schema: ""
-  sqlType: Source
-  type: sourceInput
-  version: 1
+schema: ""
+sqlType: Source
+type: sourceInput
+version: 1
 type: Node
