@@ -20,7 +20,7 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c1
+          columnCounter: bc659a51-4576-408e-9add-17a15fcc7f55
           stepCounter: T1
         dataType: NUMBER
         defaultValue: ""
