@@ -29,7 +29,7 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C_2
-                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+                stepCounter: T1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -43,7 +43,7 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C_4
-                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+                stepCounter: T1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -57,13 +57,13 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C_6
-                stepCounter: 6554094b-9840-4da4-8372-bd9b5222d59e
+                stepCounter: T1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DEPARTMENT: 6554094b-9840-4da4-8372-bd9b5222d59e
+          DEPARTMENT: T1
         customSQL:
           customSQL: ""
         dependencies:
