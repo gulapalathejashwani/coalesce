@@ -70,7 +70,7 @@ operation:
           - locationName: SRC
             nodeName: D
         join:
-          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
+          joinCondition: FROM {{ ref('SRC', 'DM') }} "DM" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
         name: STG_D
         noLinkRefs: []
   name: STG_D
