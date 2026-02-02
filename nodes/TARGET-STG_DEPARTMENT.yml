@@ -1,6 +1,6 @@
 fileVersion: 1
-id: D2
-name: STG_DEPARTMENT
+id: S2
+name: STG_D
 operation:
   config:
     insertStrategy: INSERT
@@ -28,13 +28,12 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C1
+              - columnCounter: C5
                 stepCounter: S1
             transform: ""
-
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C5
+          columnCounter: C6
           stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
@@ -43,13 +42,12 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C2
+              - columnCounter: C7
                 stepCounter: S1
             transform: ""
-
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C6
+          columnCounter: C8
           stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
@@ -58,27 +56,24 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C3
+              - columnCounter: C9
                 stepCounter: S1
             transform: ""
-
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DEPARTMENT: D1
+          DEPARTMENT: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: DEPARTMENT
+            nodeName: D
         join:
-          joinCondition: >
-            FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT"
-            WHERE "LOCATION" IN ('Chennai','Hyderabad','Bangalore')
-        name: STG_DEPARTMENT
+          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
+        name: STG_D
         noLinkRefs: []
-  name: STG_DEPARTMENT
+  name: STG_D
   overrideSQL: false
   schema: ""
   sqlType: Stage
