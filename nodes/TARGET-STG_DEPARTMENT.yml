@@ -29,8 +29,9 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C1
-                stepCounter: D1
+                stepCounter: S1
             transform: ""
+
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C5
@@ -43,8 +44,9 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
-                stepCounter: D1
+                stepCounter: S1
             transform: ""
+
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C6
@@ -57,8 +59,9 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
-                stepCounter: D1
+                stepCounter: S1
             transform: ""
+
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -70,8 +73,9 @@ operation:
           - locationName: SRC
             nodeName: DEPARTMENT
         join:
-          joinCondition: |
-            FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" IN ('Chennai','Hyderabad','Bangalore')
+          joinCondition: >
+            FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT"
+            WHERE "LOCATION" IN ('Chennai','Hyderabad','Bangalore')
         name: STG_DEPARTMENT
         noLinkRefs: []
   name: STG_DEPARTMENT
