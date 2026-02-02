@@ -403,9 +403,9 @@ operation:
             nodeName: DIM_JOINS
         join:
           joinCondition: FROM {{ ref('SRC', 'DIM_JOINS') }} "DIM_JOINS" WHERE "BASIC_PAY" = 50000
-        name: TOP_EMPLOYEE
+        name: EMPLOYEE_t1
         noLinkRefs: []
-  name: TOP_EMPLOYEE
+  name: EMPLOYEE_t1
   overrideSQL: false
   schema: ""
   sqlType: Dimension
