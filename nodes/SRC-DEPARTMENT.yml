@@ -1,7 +1,6 @@
 fileVersion: 1
 id: D1
 name: DEPARTMENT
-stepCounter: S1
 operation:
   database: ""
   deployEnabled: true
