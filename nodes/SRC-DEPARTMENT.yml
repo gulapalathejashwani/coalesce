@@ -1,6 +1,6 @@
 fileVersion: 1
 id: S1 	
-name: DM
+name: DEPARTMENT
 operation:
   database: ""
   deployEnabled: true
@@ -65,7 +65,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: DM
+  name: DEPARTMENT
   schema: ""
   sqlType: Source
   type: sourceInput
