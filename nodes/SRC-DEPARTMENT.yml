@@ -67,9 +67,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-name: DEPARTMENT
 schema: ""
 sqlType: Source
 type: sourceInput
 version: 1
-type: Node
