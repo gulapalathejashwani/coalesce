@@ -1,6 +1,6 @@
 fileVersion: 1
-id: DT
-name: D_TMENT
+id: D2
+name: STG_DEPARTMENT
 operation:
   config:
     insertStrategy: INSERT
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C_1
-          stepCounter: DT
+          columnCounter: C4
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -28,13 +28,14 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C_2
-                stepCounter: T1
+              - columnCounter: C1
+                stepCounter: S1
             transform: ""
+
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C_3
-          stepCounter: DT
+          columnCounter: C5
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -42,13 +43,14 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C_4
-                stepCounter: T1
+              - columnCounter: C2
+                stepCounter: S1
             transform: ""
+
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C_5
-          stepCounter: DT
+          columnCounter: C6
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -56,24 +58,27 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C_6
-                stepCounter: T1
+              - columnCounter: C3
+                stepCounter: S1
             transform: ""
+
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DEPARTMENT: T1
+          DEPARTMENT: D1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: DEPARTMENT
         join:
-          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
-        name: D_MENT
+          joinCondition: >
+            FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT"
+            WHERE "LOCATION" IN ('Chennai','Hyderabad','Bangalore')
+        name: STG_DEPARTMENT
         noLinkRefs: []
-  name: D_MENT
+  name: STG_DEPARTMENT
   overrideSQL: false
   schema: ""
   sqlType: Stage
