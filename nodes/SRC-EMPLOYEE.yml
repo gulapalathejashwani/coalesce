@@ -1,111 +1,119 @@
 fileVersion: 1
-id: 5909207b-0c65-4ffd-af15-f634dc566aad
-name: EMPLOYEE
+id: 9d0c2d7f-2e3a-4e6d-9a6f-2b1d2c0a8e4f
+name: EMPLOYEE_SALARY
+type: Node
 operation:
-  database: ""
-  deployEnabled: true
-  description: ""
-  locationName: SRC
-  metadata:
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7e2a266c-756c-4c63-9d7c-e75dd6cf49d4
-          stepCounter: 5909207b-0c65-4ffd-af15-f634dc566aad
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: EMP_ID
-        nullable: false
-        primaryKey: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 9c8f28cd-0111-463f-aeb3-18d8b0da9135
-          stepCounter: 5909207b-0c65-4ffd-af15-f634dc566aad
-        config: {}
-        dataType: VARCHAR(50)
-        defaultValue: ""
-        description: ""
-        name: EMP_NAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: e44e4248-72b9-4c00-870b-8a4dba2634f8
-          stepCounter: 5909207b-0c65-4ffd-af15-f634dc566aad
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: DEPT_ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2da2deac-a4e2-4f14-9f3c-6310b2f63e3b
-          stepCounter: 5909207b-0c65-4ffd-af15-f634dc566aad
-        config: {}
-        dataType: DATE
-        defaultValue: ""
-        description: ""
-        name: DOJ
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1db43612-5ee2-477d-8f89-b7ec6c4b8b96
-          stepCounter: 5909207b-0c65-4ffd-af15-f634dc566aad
-        config: {}
-        dataType: VARCHAR(10)
-        defaultValue: ""
-        description: ""
-        name: STATUS
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: EMPLOYEE
-  schema: ""
   sqlType: Source
   type: sourceInput
-  version: 1
-type: Node
+  deployEnabled: true
+  locationName: ""
+  schema: <schema_name>
+  database: ""
+  description: ""
+  metadata:
+    columns:
+      - name: SALARY_ID
+        dataType: NUMBER(38,0)
+        nullable: false
+        primaryKey: true
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e9a7b6b-3b1e-4a1d-9c7f-6f3e2b2c1a4e
+          stepCounter: 1a7e9b3c-2d1f-4e6a-9b7c-5e2f3a4b1c6d
+        config: {}
+
+      - name: EMP_ID
+        dataType: NUMBER(38,0)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7e6b1d3-2c4f-4d1a-9b2c-5f3e4a1b6c7d
+          stepCounter: 4e3a9b7c-2d1f-6e5a-1b7c-9e2f3a4b5c6d
+        config: {}
+
+      - name: BASIC_PAY
+        dataType: NUMBER(38,0)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b3e7a1d-2c4f-9e1a-5b2c-3f4e1a6b7c8d
+          stepCounter: 2e1a9b7c-3d1f-6e5a-1b7c-9e2f3a4b5c6d
+        config: {}
+
+      - name: BONUS
+        dataType: NUMBER(38,0)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d7e6b3a-2c4f-4e1a-9b2c-5f3e4a1b6c7d
+          stepCounter: 9e3a1b7c-2d1f-6e5a-1b7c-2e2f3a4b5c6d
+        config: {}
+
+      - name: PAY_MONTH
+        dataType: DATE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        transform: ""
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c3e1a6b-2d4f-9e1a-5b2c-3f4e1a6b7c8d
+          stepCounter: 3e1a9b7c-2d1f-6e5a-1b7c-9e2f3a4b5c6d
+        config: {}
+
+  name: EMPLOYEE_SALARY
+  schema: <schema_name>
+  sqlType: Source
+  type: sourceInput
+version: 1
