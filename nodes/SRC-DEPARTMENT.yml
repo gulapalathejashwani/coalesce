@@ -13,7 +13,7 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c1
+          columnCounter: 5c510e6e-b170-49fa-8b04-f0a908fe5e6f
           stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
         config: {}
         dataType: NUMBER(38,0)
@@ -32,7 +32,7 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
+          columnCounter: c4a1de57-184d-4cb2-bdb9-90d946d3ab58
           stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
         config: {}
         dataType: VARCHAR(50)
@@ -51,7 +51,7 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
+          columnCounter: 08ad3c64-5eb6-4638-a42d-d3ceb209b3f7
           stepCounter: 56ecfc77-3242-4c2c-979a-f824ad2618ad
         config: {}
         dataType: VARCHAR(50)
