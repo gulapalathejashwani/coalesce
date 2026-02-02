@@ -403,7 +403,7 @@ operation:
           - locationName: SRC
             nodeName: DIM_JOINS
         join:
-          joinCondition: FROM {{ ref('SRC', 'DIM_JOINS') }} "DIM_JOINS" WHERE "BASIC_PAY" = 80000
+          joinCondition: FROM {{ ref('SRC', 'DIM_JOINS') }} "DIM_JOINS" WHERE "BASIC_PAY" = 50000
         name: TOP_EMPLOYEE
         noLinkRefs: []
   name: TOP_EMPLOYEE
