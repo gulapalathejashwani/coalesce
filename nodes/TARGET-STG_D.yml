@@ -63,12 +63,12 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DEPARTMENT: S1
+          DM: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: D
+            nodeName: DM
         join:
           joinCondition: FROM {{ ref('SRC', 'DM') }} "DM" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
         name: STG_D
