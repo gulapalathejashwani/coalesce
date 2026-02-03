@@ -93,8 +93,8 @@ operation:
 
     name: EMPLOYEE_SALARY_FILTERED
     schema: ""
-    sqlType: Transform
-    type: sql
+    sqlType: Source
+    type: sourceInput
     version: 1
 
 type: Node
