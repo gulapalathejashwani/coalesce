@@ -91,10 +91,13 @@ operation:
         name: EMPLOYEE_SALARY_FILTERED_MAPPING
         noLinkRefs: []
 
-  name: EMPLOYEE_SALARY_FILTERED
-  schema: ""
-  sqlType: Transform
-  type: transform
-  version: 1
+    name: EMPLOYEE_SALARY_FILTERED
+    schema: ""
+    sqlType: Transform
+    type: sql
+    version: 1
+
+type: Node
+
 
 type: Node
