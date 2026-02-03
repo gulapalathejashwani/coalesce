@@ -1,0 +1,100 @@
+fileVersion: 1
+id: 5f89a2c2-3f3b-4b7e-8e7e-1a2d7e9b4d5f
+name: EMPLOYEE_ACTIVE
+
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: TARGET
+
+  metadata:
+    columns:
+      - name: EMP_ID
+        dataType: NUMBER
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: EMPLOYEE
+            transform: ""
+
+      - name: EMP_NAME
+        dataType: VARCHAR(50)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: EMPLOYEE
+            transform: ""
+
+      - name: DEPT_ID
+        dataType: NUMBER
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: EMPLOYEE
+            transform: ""
+
+      - name: DOJ
+        dataType: DATE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4
+                stepCounter: EMPLOYEE
+            transform: ""
+
+      - name: STATUS
+        dataType: VARCHAR(10)
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+        defaultValue: ""
+        description: ""
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5
+                stepCounter: EMPLOYEE
+            transform: ""
+
+    cteString: ""
+    enabledColumnTestIDs: []
+
+    sourceMapping:
+      - aliases:
+          EMPLOYEE: EMPLOYEE
+        dependencies:
+          - locationName: TARGET
+            nodeName: EMPLOYEE
+        join:
+          joinCondition: |
+            FROM {{ ref('TARGET', 'EMPLOYEE') }}
+            WHERE STATUS = 'ACTIVE'
+        name: EMPLOYEE
+        noLinkRefs: []
+
+  name: EMPLOYEE_ACTIVE
+  schema: dbo
+  sqlType: Transform
+  type: transform
+  version: 1
+
+type: Node
