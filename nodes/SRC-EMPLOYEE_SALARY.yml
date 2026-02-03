@@ -5,7 +5,7 @@ name: EMPLOYEE_SALARY
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: "SRC"
   locationName: ""
   metadata:
     columns:
