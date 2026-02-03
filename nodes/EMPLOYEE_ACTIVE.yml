@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 5f89a2c2-3f3b-4b7e-8e7e-1a2d7e9b4d5f
+id: 0a6e1c8d-7a8e-4f1f-9d7c-7a3bce2a7b81
 name: EMPLOYEE_ACTIVE
 
 operation:
@@ -12,14 +12,14 @@ operation:
     columns:
       - name: EMP_ID
         dataType: NUMBER
-        nullable: true
-        primaryKey: false
+        nullable: false
+        primaryKey: true
         uniqueKey: false
         defaultValue: ""
         description: ""
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1
+              - columnCounter: emp_id_src
                 stepCounter: EMPLOYEE
             transform: ""
 
@@ -32,7 +32,7 @@ operation:
         description: ""
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2
+              - columnCounter: emp_name_src
                 stepCounter: EMPLOYEE
             transform: ""
 
@@ -45,7 +45,7 @@ operation:
         description: ""
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3
+              - columnCounter: dept_id_src
                 stepCounter: EMPLOYEE
             transform: ""
 
@@ -58,7 +58,7 @@ operation:
         description: ""
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4
+              - columnCounter: doj_src
                 stepCounter: EMPLOYEE
             transform: ""
 
@@ -71,7 +71,7 @@ operation:
         description: ""
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 5
+              - columnCounter: status_src
                 stepCounter: EMPLOYEE
             transform: ""
 
@@ -88,13 +88,13 @@ operation:
           joinCondition: |
             FROM {{ ref('TARGET', 'EMPLOYEE') }}
             WHERE STATUS = 'ACTIVE'
-        name: EMPLOYEE
+        name: EMPLOYEE_ACTIVE_MAPPING
         noLinkRefs: []
 
   name: EMPLOYEE_ACTIVE
-  schema: dbo
+  schema: ""
   sqlType: Transform
-  type: transform
+  type: sql
   version: 1
 
 type: Node
