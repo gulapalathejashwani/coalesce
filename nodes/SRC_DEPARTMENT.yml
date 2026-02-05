@@ -4,8 +4,8 @@ name: DEPARTMENT
 operation:
   database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: "Source table for department data"
-  locationName: "PC_COALESCE_DB.RAW.DEPARTMENT"
+  description: ""
+  locationName: SRC
   metadata:
     columns:
       - acceptedValues:
@@ -16,18 +16,17 @@ operation:
           columnCounter: C1
           stepCounter: S1
         config: {}
-        dataType: NUMBER
+        dataType: ""
         defaultValue: ""
-        description: "Department ID"
+        description: ""
         name: DEPT_ID
         nullable: false
-        primaryKey: true
+        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
         uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
@@ -36,18 +35,17 @@ operation:
           columnCounter: C2
           stepCounter: S1
         config: {}
-        dataType: STRING
+        dataType: ""
         defaultValue: ""
-        description: "Department Name"
+        description: ""
         name: DEPT_NAME
-        nullable: true
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
         uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
@@ -56,18 +54,17 @@ operation:
           columnCounter: C3
           stepCounter: S1
         config: {}
-        dataType: STRING
+        dataType: ""
         defaultValue: ""
-        description: "Location"
+        description: ""
         name: LOCATION
-        nullable: true
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
         uniqueKey: false
-
   name: DEPARTMENT
   schema: "RAW"
   sqlType: Source
