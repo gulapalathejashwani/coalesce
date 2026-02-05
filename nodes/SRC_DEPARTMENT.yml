@@ -1,0 +1,10 @@
+version: 1
+node_type: source
+name: SRC_DEPARTMENT
+location: SRC
+sql: |
+  SELECT DEPT_ID, DEPT_NAME, LOCATION FROM PC_COALESCE_DB.RAW.DEPARTMENT
+columns:
+  - name: DEPT_ID
+  - name: DEPT_NAME
+  - name: LOCATION
