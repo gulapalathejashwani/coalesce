@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S1
+id: S1          # e.g. S1
 name: DEPARTMENT
 operation:
   database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: ""
+  description: "Source table from SSIS: PC_COALESCE_DB.RAW.DEPARTMENT"
   locationName: SRC
   metadata:
     columns:
@@ -13,15 +13,15 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
+          columnCounter: C1   # e.g. C1
           stepCounter: S1
         config: {}
-        dataType: ""
+        dataType: "NUMBER"
         defaultValue: ""
-        description: ""
+        description: "Department ID"
         name: DEPT_ID
         nullable: false
-        primaryKey: false
+        primaryKey: true
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -32,14 +32,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
+          columnCounter: C2   # e.g. C2
           stepCounter: S1
         config: {}
-        dataType: ""
+        dataType: "VARCHAR"
         defaultValue: ""
-        description: ""
+        description: "Department Name"
         name: DEPT_NAME
-        nullable: false
+        nullable: true
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -51,14 +51,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
+          columnCounter: C3   # e.g. C3
           stepCounter: S1
         config: {}
-        dataType: ""
+        dataType: "VARCHAR"
         defaultValue: ""
-        description: ""
+        description: "Department Location"
         name: LOCATION
-        nullable: false
+        nullable: true
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
