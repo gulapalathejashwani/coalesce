@@ -1,5 +1,5 @@
 fileVersion: 1
-id: cb92f9f3-a015-4032-ad4e-2aa961e829a3
+id: S2
 name: STG_DEPARTMENT
 operation:
   config:
@@ -12,15 +12,15 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: TARGET
+  locationName: SRC
   materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8f8283ac-e1d1-4103-8f6a-3ebf00cdc7cf
-          stepCounter: cb92f9f3-a015-4032-ad4e-2aa961e829a3
+          columnCounter: C4
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C4
-                stepCounter: S2
+              - columnCounter: C1
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b3b8e00c-96bc-4494-a865-c16b025b4407
-          stepCounter: cb92f9f3-a015-4032-ad4e-2aa961e829a3
+          columnCounter: C6
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C6
-                stepCounter: S2
+              - columnCounter: C2
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 85709e65-93c8-4d66-be48-9d798e3b3853
-          stepCounter: cb92f9f3-a015-4032-ad4e-2aa961e829a3
+          columnCounter: C8
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -56,21 +56,21 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C8
-                stepCounter: S2
+              - columnCounter: C3
+                stepCounter: S1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_DEPARTMENT: S2
+          DEPARTMENT: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: STG_DEPARTMENT
+            nodeName: DEPARTMENT
         join:
-          joinCondition: FROM {{ ref('SRC', 'STG_DEPARTMENT') }} "STG_DEPARTMENT"
+          joinCondition: FROM {{ ref('SRC', 'DEPARTMENT') }} "DEPARTMENT" WHERE "LOCATION" In ('Chennai','Hyderabad','Bangalore')
         name: STG_DEPARTMENT
         noLinkRefs: []
   name: STG_DEPARTMENT
