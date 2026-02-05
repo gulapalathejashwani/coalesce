@@ -1,0 +1,9 @@
+version: 1
+node_type: target
+name: DEPARTMENT_NEW
+location: PC_COALESCE_DB.RAW.DEPARTMENT_NEW
+source: CONDITIONAL_SPLIT_DEPARTMENT
+columns:
+  - name: DEPT_ID
+  - name: DEPT_NAME
+  - name: LOCATION
