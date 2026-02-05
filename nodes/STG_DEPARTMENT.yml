@@ -1,0 +1,85 @@
+fileVersion: 1
+id: S2
+name: STG_DEPARTMENT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S2
+        config: {}
+        dataType: ""
+        description: ""
+        name: DEPT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C1
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S2
+        config: {}
+        dataType: ""
+        description: ""
+        name: DEPT_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S2
+        config: {}
+        dataType: ""
+        description: ""
+        name: LOCATION
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: S1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DEPARTMENT: S1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DEPARTMENT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'DEPARTMENT') }}
+            WHERE LOCATION = 'Chennai'
+        name: STG_DEPARTMENT
+        noLinkRefs: []
+  name: STG_DEPARTMENT
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
