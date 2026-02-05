@@ -1,6 +1,6 @@
 fileVersion: 1
-id: S2
-name: STG_DEPARTMENT
+id: S2            # e.g. S2
+name: STG_DEPARTMENT        # e.g. STG_DEPARTMENT
 operation:
   config:
     insertStrategy: INSERT
@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: ""
+  description: "Stage transformation for DEPARTMENT with filter: LOCATION == 'Chennai'"
   isMultisource: false
   locationName: SRC
   materializationType: table
@@ -22,8 +22,8 @@ operation:
           columnCounter: C1
           stepCounter: S2
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "NUMBER"
+        description: "Department ID"
         name: DEPT_ID
         nullable: false
         sourceColumnReferences:
@@ -36,10 +36,10 @@ operation:
           columnCounter: C2
           stepCounter: S2
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "VARCHAR"
+        description: "Department Name"
         name: DEPT_NAME
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
@@ -50,10 +50,10 @@ operation:
           columnCounter: C3
           stepCounter: S2
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "VARCHAR"
+        description: "Department Location"
         name: LOCATION
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
