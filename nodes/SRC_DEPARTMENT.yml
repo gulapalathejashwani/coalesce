@@ -4,8 +4,8 @@ name: DEPARTMENT
 operation:
   database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: "Source table from Snowflake"
-  locationName: PC_COALESCE_DB.RAW.DEPARTMENT
+  description: "Source table for department data"
+  locationName: "PC_COALESCE_DB.RAW.DEPARTMENT"
   metadata:
     columns:
       - acceptedValues:
