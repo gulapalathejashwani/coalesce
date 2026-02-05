@@ -1,5 +1,5 @@
 fileVersion: 1
-id: S3
+id: S3           # UUID or deterministic hash
 name: DEPARTMENT_NEW
 operation:
   config:
@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: ""
+  description: "Target table for filtered DEPARTMENT data"
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -22,8 +22,8 @@ operation:
           columnCounter: C1
           stepCounter: S3
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "NUMBER"
+        description: "Department ID"
         name: DEPT_ID
         nullable: false
         sourceColumnReferences:
@@ -36,10 +36,10 @@ operation:
           columnCounter: C2
           stepCounter: S3
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "VARCHAR"
+        description: "Department Name"
         name: DEPT_NAME
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
@@ -50,10 +50,10 @@ operation:
           columnCounter: C3
           stepCounter: S3
         config: {}
-        dataType: ""
-        description: ""
+        dataType: "VARCHAR"
+        description: "Department Location"
         name: LOCATION
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
