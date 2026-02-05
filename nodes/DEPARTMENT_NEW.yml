@@ -1,9 +1,84 @@
-version: 1
-node_type: target
-name: DEPARTMENT_NEW
-location: PC_COALESCE_DB.RAW.DEPARTMENT_NEW
-source: CONDITIONAL_SPLIT_DEPARTMENT
-columns:
-  - name: DEPT_ID
-  - name: DEPT_NAME
-  - name: LOCATION
+fileVersion: 1
+id: T1
+name: STG_DEPARTMENT_NEW
+operation:
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Target table after Chennai filter"
+  locationName: PC_COALESCE_DB.RAW.DEPARTMENT_NEW
+  materializationType: table
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: T1
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: "Department ID"
+        name: DEPT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C1
+                stepCounter: F1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: T1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "Department Name"
+        name: DEPT_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: F1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: T1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "Location"
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: F1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+  name: STG_DEPARTMENT_NEW
+  schema: "RAW"
+  sqlType: Target
+  type: table
+  version: 1
+
+type: Node
