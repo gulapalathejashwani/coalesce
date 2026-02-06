@@ -1,6 +1,6 @@
 fileVersion: 1
 id: S1
-name: bc_account
+name: BC_ACCOUNT
 operation:
   database: "PC_COALESCE_DB"
   deployEnabled: true
@@ -157,7 +157,7 @@ operation:
         nullable: true
         primaryKey: false
 
-  name: bc_account
+  name: BC_ACCOUNT
   schema: "RAW"
   sqlType: Source
   type: sourceInput
