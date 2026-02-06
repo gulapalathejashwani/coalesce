@@ -2,13 +2,73 @@ fileVersion: 1
 id: S1
 name: DEPARTMENT
 operation:
-  database: "PC_COALESCE_DB"
+  database: ""
   deployEnabled: true
-  description: "Source node for DEPARTMENT table"
+  description: ""
   locationName: SRC
   metadata:
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
-        appliedColumnTests: {
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S1
+        config: {}
+        dataType: string
+        defaultValue: ""
+        description: ""
+        name: DEPT_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S1
+        config: {}
+        dataType: string
+        defaultValue: ""
+        description: ""
+        name: DEPT_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S1
+        config: {}
+        dataType: string
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DEPARTMENT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
