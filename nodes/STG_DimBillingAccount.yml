@@ -1,5 +1,5 @@
 fileVersion: 1
-id: stg_dimbillingaccount
+id: S2
 name: STG_DimBillingAccount
 operation:
   config:
@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: "Stage transformation for DimBillingAccount with complex joins and CTEs"
+  description: "Stage transformation for DimBillingAccount with derived columns and lookups"
   isMultisource: false
   locationName: SRC
   materializationType: table
@@ -20,7 +20,7 @@ operation:
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(20)
         description: ""
@@ -29,12 +29,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C1
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(255)
         description: ""
@@ -43,12 +43,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(255)
         description: ""
@@ -57,12 +57,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -71,26 +71,26 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C4
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: INTEGER
         description: ""
         name: ParentAccountNumber
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C5
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -99,124 +99,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C6
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C7
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: ServiceTierName
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C7
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C8
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: VARCHAR(60)
-        description: ""
-        name: SecurityZone
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C8
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C9
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        description: ""
-        name: AccountCloseDate
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C9
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C10
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        description: ""
-        name: AccountCreationDate
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C10
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C11
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: DeliquencyStatusName
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C11
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C12
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: GWRowNumber
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C12
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C13
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: BeanVersion
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C13
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C14
-          stepCounter: stg_dimbillingaccount
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: IsActive
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C14
-                stepCounter: bc_account_src
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C15
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -224,13 +112,41 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C15
-                stepCounter: bc_account_src
+              - columnCounter: C7
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C16
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C8
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: ServiceTierName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C8
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR(60)
+        description: ""
+        name: SecurityZone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C9
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(45)
         description: ""
@@ -238,13 +154,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C16
-                stepCounter: bc_account_src
+              - columnCounter: C10
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C17
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C11
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(45)
         description: ""
@@ -252,13 +168,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C17
-                stepCounter: bc_account_src
+              - columnCounter: C11
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C18
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C12
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -266,13 +182,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C18
-                stepCounter: bc_account_src
+              - columnCounter: C12
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C19
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C13
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -280,13 +196,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C19
-                stepCounter: bc_account_src
+              - columnCounter: C13
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C20
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C14
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -294,13 +210,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C20
-                stepCounter: bc_account_src
+              - columnCounter: C14
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C21
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C15
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -308,13 +224,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C21
-                stepCounter: bc_account_src
+              - columnCounter: C15
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C22
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C16
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -322,13 +238,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C22
-                stepCounter: bc_account_src
+              - columnCounter: C16
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C23
-          stepCounter: stg_dimbillingaccount
+          columnCounter: C17
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -336,13 +252,97 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
+              - columnCounter: C17
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: S2
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: AccountCloseDate
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C18
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: S2
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: AccountCreationDate
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C19
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DeliquencyStatusName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C20
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: S2
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: GWRowNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C21
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: BeanVersion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C22
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: S2
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: IsActive
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
               - columnCounter: C23
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C24
-          stepCounter: stg_dimbillingaccount
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(2)
         description: ""
@@ -351,21 +351,21 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C24
-                stepCounter: bc_account_src
+                stepCounter: S1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          bc_account: bc_account_src
+          GuideWire_BillingAccount: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: bc_account
+            nodeName: GuideWire_BillingAccount
         join:
           joinCondition: |
-            FROM {{ ref('SRC', 'bc_account') }} bc_account
+            FROM {{ ref('SRC', 'GuideWire_BillingAccount') }} GuideWire_BillingAccount
         name: STG_DimBillingAccount
         noLinkRefs: []
   name: STG_DimBillingAccount
