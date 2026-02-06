@@ -8,9 +8,9 @@ operation:
     preSQL: ""
     testsEnabled: true
     truncateBefore: true
-  database: "PC_COALESCE_DB"
+  database: ""
   deployEnabled: true
-  description: "Stage node for DEPARTMENT table with Chennai filter"
+  description: ""
   isMultisource: false
   locationName: SRC
   materializationType: table
@@ -22,8 +22,8 @@ operation:
           columnCounter: C1
           stepCounter: S2
         config: {}
-        dataType: INTEGER
-        description: "Department ID"
+        dataType: string
+        description: ""
         name: DEPT_ID
         nullable: false
         sourceColumnReferences:
@@ -36,8 +36,8 @@ operation:
           columnCounter: C2
           stepCounter: S2
         config: {}
-        dataType: STRING
-        description: "Department Name"
+        dataType: string
+        description: ""
         name: DEPT_NAME
         nullable: false
         sourceColumnReferences:
@@ -50,8 +50,8 @@ operation:
           columnCounter: C3
           stepCounter: S2
         config: {}
-        dataType: STRING
-        description: "Department Location"
+        dataType: string
+        description: ""
         name: LOCATION
         nullable: false
         sourceColumnReferences:
@@ -71,13 +71,13 @@ operation:
             nodeName: DEPARTMENT
         join:
           joinCondition: |
-            FROM {{ ref('SRC', 'DEPARTMENT') }}
+            FROM {{ ref('SRC', 'DEPARTMENT') }} DEPARTMENT
             WHERE LOCATION = 'Chennai'
         name: STG_DEPARTMENT
         noLinkRefs: []
   name: STG_DEPARTMENT
   overrideSQL: false
-  schema: "RAW"
+  schema: ""
   sqlType: Stage
   type: sql
   version: 1
