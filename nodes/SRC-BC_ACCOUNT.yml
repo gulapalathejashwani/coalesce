@@ -1,55 +1,164 @@
 fileVersion: 1
 id: S1
-name: GuideWire
+name: bc_account
 operation:
-  database: ""
+  database: "PC_COALESCE_DB"
   deployEnabled: true
   description: ""
   locationName: SRC
   metadata:
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C1
-          stepCounter: S1
-        config: {}
+      - name: AccountNumber
         dataType: str
-        defaultValue: ""
-        description: ""
-        name: PublicID
+        length: 255
         nullable: true
         primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: S1
-        config: {}
+
+      - name: AccountName
         dataType: str
-        defaultValue: ""
-        description: ""
-        name: AccountNumber
+        length: 255
         nullable: true
         primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      # ... repeat for all columns from OLE_SRC - GuideWire.Outputs[OLE DB Source Output] in order, using exact names and SSIS datatypes ...
-      # (e.g. AccountName, AccountTypeName, BillingLevelName, ServiceTierName, SecurityZone, AccountCloseDate, etc.)
-  name: GuideWire
-  schema: ""
+
+      - name: AccountTypeName
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: ParentAccountNumber
+        dataType: i4
+        nullable: true
+        primaryKey: false
+
+      - name: BillingLevelName
+        dataType: str
+        length: 100
+        nullable: true
+        primaryKey: false
+
+      - name: Segment
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: ServiceTierName
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: SecurityZone
+        dataType: str
+        length: 60
+        nullable: true
+        primaryKey: false
+
+      - name: FirstName
+        dataType: str
+        length: 45
+        nullable: true
+        primaryKey: false
+
+      - name: LastName
+        dataType: str
+        length: 45
+        nullable: true
+        primaryKey: false
+
+      - name: AddressLine1
+        dataType: str
+        length: 60
+        nullable: true
+        primaryKey: false
+
+      - name: AddressLine2
+        dataType: str
+        length: 60
+        nullable: true
+        primaryKey: false
+
+      - name: AddressLine3
+        dataType: str
+        length: 60
+        nullable: true
+        primaryKey: false
+
+      - name: City
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: State
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: PostalCode
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: AccountCloseDate
+        dataType: dbTimeStamp2
+        nullable: true
+        primaryKey: false
+
+      - name: AccountCreationDate
+        dataType: dbTimeStamp2
+        nullable: true
+        primaryKey: false
+
+      - name: DeliquencyStatusName
+        dataType: str
+        length: 50
+        nullable: true
+        primaryKey: false
+
+      - name: FirstTwicePerMonthInvoiceDayOfMonth
+        dataType: i4
+        nullable: true
+        primaryKey: false
+
+      - name: SecondTwicePerMonthInvoiceDayOfMonth
+        dataType: i4
+        nullable: true
+        primaryKey: false
+
+      - name: PublicID
+        dataType: str
+        length: 20
+        nullable: false
+        primaryKey: true
+
+      - name: GWRowNumber
+        dataType: i8
+        nullable: true
+        primaryKey: false
+
+      - name: BeanVersion
+        dataType: str
+        length: 20
+        nullable: true
+        primaryKey: false
+
+      - name: IsActive
+        dataType: i4
+        nullable: true
+        primaryKey: false
+
+      - name: LegacySourceSystem
+        dataType: str
+        length: 2
+        nullable: true
+        primaryKey: false
+
+  name: bc_account
+  schema: "RAW"
   sqlType: Source
   type: sourceInput
   version: 1
