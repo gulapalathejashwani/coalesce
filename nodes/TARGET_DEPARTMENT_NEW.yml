@@ -8,9 +8,9 @@ operation:
     preSQL: ""
     testsEnabled: true
     truncateBefore: true
-  database: "PC_COALESCE_DB"
+  database: ""
   deployEnabled: true
-  description: "Target node for DEPARTMENT_NEW table"
+  description: ""
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -22,8 +22,8 @@ operation:
           columnCounter: C1
           stepCounter: S3
         config: {}
-        dataType: INTEGER
-        description: "Department ID"
+        dataType: string
+        description: ""
         name: DEPT_ID
         nullable: false
         sourceColumnReferences:
@@ -36,8 +36,8 @@ operation:
           columnCounter: C2
           stepCounter: S3
         config: {}
-        dataType: STRING
-        description: "Department Name"
+        dataType: string
+        description: ""
         name: DEPT_NAME
         nullable: false
         sourceColumnReferences:
@@ -50,8 +50,8 @@ operation:
           columnCounter: C3
           stepCounter: S3
         config: {}
-        dataType: STRING
-        description: "Department Location"
+        dataType: string
+        description: ""
         name: LOCATION
         nullable: false
         sourceColumnReferences:
@@ -76,7 +76,7 @@ operation:
         noLinkRefs: []
   name: DEPARTMENT_NEW
   overrideSQL: false
-  schema: "RAW"
+  schema: ""
   sqlType: Stage
   type: sql
   version: 1
