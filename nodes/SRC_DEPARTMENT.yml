@@ -1,0 +1,14 @@
+fileVersion: 1
+id: S1
+name: DEPARTMENT
+operation:
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Source node for DEPARTMENT table"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {
