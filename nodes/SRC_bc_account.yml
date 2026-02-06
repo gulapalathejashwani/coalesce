@@ -1,6 +1,6 @@
 fileVersion: 1
 id: bc_account_src
-name: bc_account
+name: BC_ACCOUNT
 operation:
   database: ""
   deployEnabled: true
@@ -464,7 +464,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: bc_account
+  name: BC_ACCOUNT
   schema: ""
   sqlType: Source
   type: sourceInput
