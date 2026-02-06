@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-name: BC_ACCOUNT
+id: S1
+name: GuideWire
 operation:
   database: ""
   deployEnabled: true
@@ -13,13 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3cff807c-e25c-4ee6-acbd-c145b114de3b
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
+          columnCounter: C1
+          stepCounter: S1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: str
         defaultValue: ""
         description: ""
-        name: ID
+        name: PublicID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -32,13 +32,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a5d08510-c7b1-459b-9754-3feca84a7c32
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
+          columnCounter: C2
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(20)
+        dataType: str
         defaultValue: ""
         description: ""
-        name: PUBLICID
+        name: AccountNumber
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -46,256 +46,12 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7249f22a-4f2c-457c-9c19-01da022f9865
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: VARCHAR(255)
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTNUMBER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 5eaefe00-6ab8-44d9-81e8-6e483b7b89b4
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: VARCHAR(255)
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 5c1d7ba7-8be4-46e1-841e-e634bd567056
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTTYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: fe11f41e-9ac0-44ab-8e0b-3c0179c291aa
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: BILLINGLEVEL
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: e97cea47-4065-46ee-9b7c-b2b223f12ac8
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: SERVICETIER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 642a486a-9f3a-41d1-887b-f033dbfc3f4a
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: SECURITYZONEID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 03197b1b-0b3b-4142-9432-5009bd0eb271
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: DELINQUENCYSTATUS
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 423dc7e7-7f3a-4696-ae50-c9b7101a7d09
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: SEGMENT
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 038b2d4d-a383-4efb-8c66-18b20cd701ab
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        defaultValue: ""
-        description: ""
-        name: CLOSEDATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 90299162-a556-4d04-9478-0fd3372b662f
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        defaultValue: ""
-        description: ""
-        name: CREATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: cfeb255d-9230-42ae-82dd-32a1d9e91a83
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        defaultValue: ""
-        description: ""
-        name: UPDATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 326bcd97-0ffe-4f3b-9d2d-732cdf93778e
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 99fd2368-c2e7-4802-8e25-f5de54a39fc0
-          stepCounter: 946c5eb1-cbd0-4752-bb06-a3bfd0fa9aec
-        config: {}
-        dataType: NUMBER(1,0)
-        defaultValue: ""
-        description: ""
-        name: RETIRED
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: BC_ACCOUNT
+      # ... repeat for all columns from OLE_SRC - GuideWire.Outputs[OLE DB Source Output] in order, using exact names and SSIS datatypes ...
+      # (e.g. AccountName, AccountTypeName, BillingLevelName, ServiceTierName, SecurityZone, AccountCloseDate, etc.)
+  name: GuideWire
   schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
+
 type: Node
