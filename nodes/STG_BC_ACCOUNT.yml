@@ -1,5 +1,5 @@
 fileVersion: 1
-id: STG_BC_ACCOUNT
+id: S2
 name: STG_BC_ACCOUNT
 operation:
   config:
@@ -8,9 +8,9 @@ operation:
     preSQL: ""
     testsEnabled: true
     truncateBefore: true
-  database: "PC_COALESCE_DB"
+  database: ""
   deployEnabled: true
-  description: "Stage transformation for BC_ACCOUNT with derived columns and filters"
+  description: ""
   isMultisource: false
   locationName: SRC
   materializationType: table
@@ -20,344 +20,344 @@ operation:
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(20)
+        dataType: VARCHAR
         description: ""
         name: PUBLICID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C1
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(255)
+        dataType: VARCHAR
         description: ""
         name: ACCOUNTNUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(255)
+        dataType: VARCHAR
         description: ""
         name: ACCOUNTNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR
         description: ""
         name: ACCOUNTTYPENAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C4
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: NUMBER
         description: ""
         name: PARENTACCOUNTNUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C5
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(100)
+        dataType: VARCHAR
         description: ""
         name: BILLINGLEVELNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C6
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C7
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR
         description: ""
         name: SEGMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C7
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C8
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR
         description: ""
         name: SERVICETIERNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C8
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C9
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(60)
+        dataType: VARCHAR
         description: ""
         name: SECURITYZONE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C9
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: C10
-          stepCounter: STG_BC_ACCOUNT
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(45)
-        description: ""
-        name: FIRSTNAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C10
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C11
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(45)
-        description: ""
-        name: LASTNAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C11
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C12
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(60)
-        description: ""
-        name: ADDRESSLINE1
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C12
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C13
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(60)
-        description: ""
-        name: ADDRESSLINE2
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C13
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C14
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(60)
-        description: ""
-        name: ADDRESSLINE3
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C14
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C15
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: CITY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C15
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C16
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: STATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C16
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C17
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: POSTALCODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C17
-                stepCounter: BC_ACCOUNT_SRC
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: C18
-          stepCounter: STG_BC_ACCOUNT
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: TIMESTAMP
         description: ""
         name: ACCOUNTCLOSEDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C18
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C10
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C19
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C11
+          stepCounter: S2
         config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: TIMESTAMP
         description: ""
         name: ACCOUNTCREATIONDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C19
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C11
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C20
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C12
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR
         description: ""
         name: DELIQUENCYSTATUSNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C20
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C12
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C21
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C13
+          stepCounter: S2
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: NUMBER
         description: ""
         name: GWROWNUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C21
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C13
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C22
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C14
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(20)
+        dataType: VARCHAR
         description: ""
         name: BEANVERSION
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C22
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C14
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C23
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C15
+          stepCounter: S2
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: NUMBER
         description: ""
         name: ISACTIVE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C23
-                stepCounter: BC_ACCOUNT_SRC
+              - columnCounter: C15
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: C24
-          stepCounter: STG_BC_ACCOUNT
+          columnCounter: C16
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(2)
+        dataType: VARCHAR
         description: ""
         name: LEGACYSOURCESYSTEM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
+              - columnCounter: C16
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C17
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C18
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C19
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C20
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C21
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C22
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C23
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
               - columnCounter: C24
-                stepCounter: BC_ACCOUNT_SRC
+                stepCounter: S1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          BC_ACCOUNT: BC_ACCOUNT_SRC
+          BC_ACCOUNT: S1
         customSQL:
           customSQL: ""
         dependencies:
@@ -370,7 +370,7 @@ operation:
         noLinkRefs: []
   name: STG_BC_ACCOUNT
   overrideSQL: false
-  schema: "RAW"
+  schema: ""
   sqlType: Stage
   type: sql
   version: 1
