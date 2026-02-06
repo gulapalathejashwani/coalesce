@@ -4,7 +4,7 @@ name: BC_ACCOUNT
 operation:
   database: ""
   deployEnabled: true
-  description: "Source data from BC_ACCOUNT with related tables"
+  description: "Source table for billing account data from GuideWire"
   locationName: SRC
   metadata:
     columns:
