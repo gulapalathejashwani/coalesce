@@ -1,10 +1,10 @@
 fileVersion: 1
-id: bc_account_src
+id: S1
 name: BC_ACCOUNT
 operation:
   database: ""
   deployEnabled: true
-  description: "Source node for bc_account table from GuideWire"
+  description: "Source data from GuideWire bc_account with related tables"
   locationName: SRC
   metadata:
     columns:
@@ -14,12 +14,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(20)
         defaultValue: ""
         description: ""
-        name: PublicID
+        name: PUBLICID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -33,12 +33,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
-        name: AccountNumber
+        name: ACCOUNTNUMBER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -52,12 +52,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
-        name: AccountName
+        name: ACCOUNTNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -71,12 +71,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: AccountTypeName
+        name: ACCOUNTTYPENAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -90,12 +90,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ParentAccountNumber
+        name: PARENTACCOUNTNUMBER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -109,12 +109,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(100)
         defaultValue: ""
         description: ""
-        name: BillingLevelName
+        name: BILLINGLEVELNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -128,12 +128,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C7
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: ServiceTierName
+        name: SEGMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -147,12 +147,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C8
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: SecurityZone
+        name: SERVICETIERNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -166,12 +166,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C9
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
-        name: AccountCloseDate
+        name: SECURITYZONE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -185,12 +185,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C10
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: VARCHAR(45)
         defaultValue: ""
         description: ""
-        name: AccountCreationDate
+        name: FIRSTNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -204,12 +204,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C11
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR(45)
         defaultValue: ""
         description: ""
-        name: DeliquencyStatusName
+        name: LASTNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -223,12 +223,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C12
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
-        name: GWRowNumber
+        name: ADDRESSLINE1
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -242,12 +242,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C13
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(20)
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
-        name: BeanVersion
+        name: ADDRESSLINE2
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -261,12 +261,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C14
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
-        name: IsActive
+        name: ADDRESSLINE3
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -280,12 +280,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C15
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: Segment
+        name: CITY
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -299,12 +299,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C16
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(45)
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: FirstName
+        name: STATE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -318,12 +318,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C17
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(45)
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: LastName
+        name: POSTALCODE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -337,12 +337,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C18
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: TIMESTAMP_NTZ
         defaultValue: ""
         description: ""
-        name: AddressLine1
+        name: ACCOUNTCLOSEDATE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -356,12 +356,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C19
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: TIMESTAMP_NTZ
         defaultValue: ""
         description: ""
-        name: AddressLine2
+        name: ACCOUNTCREATIONDATE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -375,12 +375,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C20
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
-        name: AddressLine3
+        name: DELIQUENCYSTATUSNAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -394,12 +394,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C21
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: City
+        name: GWROWNUMBER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -413,12 +413,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C22
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: VARCHAR(20)
         defaultValue: ""
         description: ""
-        name: State
+        name: BEANVERSION
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -432,12 +432,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C23
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: PostalCode
+        name: ISACTIVE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -451,12 +451,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C24
-          stepCounter: bc_account_src
+          stepCounter: S1
         config: {}
         dataType: VARCHAR(2)
         defaultValue: ""
         description: ""
-        name: LegacySourceSystem
+        name: LEGACYSOURCESYSTEM
         nullable: true
         primaryKey: false
         sourceColumnReferences:
