@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S1
+id: BC_ACCOUNT_SRC
 name: BC_ACCOUNT
 operation:
-  database: ""
+  database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: "Source data from GuideWire bc_account with related tables"
+  description: "Source table for Billing Account data from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -14,7 +14,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(20)
         defaultValue: ""
@@ -33,7 +33,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(255)
         defaultValue: ""
@@ -52,7 +52,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(255)
         defaultValue: ""
@@ -71,7 +71,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -90,7 +90,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -109,7 +109,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(100)
         defaultValue: ""
@@ -128,7 +128,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C7
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -147,7 +147,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C8
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -166,7 +166,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C9
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(60)
         defaultValue: ""
@@ -185,7 +185,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C10
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(45)
         defaultValue: ""
@@ -204,7 +204,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C11
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(45)
         defaultValue: ""
@@ -223,7 +223,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C12
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(60)
         defaultValue: ""
@@ -242,7 +242,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C13
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(60)
         defaultValue: ""
@@ -261,7 +261,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C14
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(60)
         defaultValue: ""
@@ -280,7 +280,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C15
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -299,7 +299,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C16
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -318,7 +318,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C17
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -337,9 +337,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C18
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
-        dataType: TIMESTAMP_NTZ
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: ACCOUNTCLOSEDATE
@@ -356,9 +356,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C19
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
-        dataType: TIMESTAMP_NTZ
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: ACCOUNTCREATIONDATE
@@ -375,7 +375,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C20
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(50)
         defaultValue: ""
@@ -394,7 +394,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C21
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -413,7 +413,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C22
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(20)
         defaultValue: ""
@@ -432,7 +432,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C23
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -451,7 +451,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C24
-          stepCounter: S1
+          stepCounter: BC_ACCOUNT_SRC
         config: {}
         dataType: VARCHAR(2)
         defaultValue: ""
@@ -465,7 +465,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_ACCOUNT
-  schema: ""
+  schema: "RAW"
   sqlType: Source
   type: sourceInput
   version: 1
