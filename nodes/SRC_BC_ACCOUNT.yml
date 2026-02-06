@@ -2,9 +2,9 @@ fileVersion: 1
 id: S1
 name: BC_ACCOUNT
 operation:
-  database: ""
+  database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: ""
+  description: "Source node for BC_ACCOUNT with joins to related tables"
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(20)
         defaultValue: ""
         description: ""
         name: PUBLICID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
         name: ACCOUNTNUMBER
@@ -54,7 +54,7 @@ operation:
           columnCounter: C3
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
         name: ACCOUNTNAME
@@ -73,7 +73,7 @@ operation:
           columnCounter: C4
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: ACCOUNTTYPENAME
@@ -92,7 +92,7 @@ operation:
           columnCounter: C5
           stepCounter: S1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: PARENTACCOUNTNUMBER
@@ -111,7 +111,7 @@ operation:
           columnCounter: C6
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(100)
         defaultValue: ""
         description: ""
         name: BILLINGLEVELNAME
@@ -130,7 +130,7 @@ operation:
           columnCounter: C7
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: SEGMENT
@@ -149,7 +149,7 @@ operation:
           columnCounter: C8
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: SERVICETIERNAME
@@ -168,7 +168,7 @@ operation:
           columnCounter: C9
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
         name: SECURITYZONE
@@ -187,140 +187,7 @@ operation:
           columnCounter: C10
           stepCounter: S1
         config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTCLOSEDATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C11
-          stepCounter: S1
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTCREATIONDATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C12
-          stepCounter: S1
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: DELIQUENCYSTATUSNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C13
-          stepCounter: S1
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: GWROWNUMBER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C14
-          stepCounter: S1
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C15
-          stepCounter: S1
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: ISACTIVE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C16
-          stepCounter: S1
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: LEGACYSOURCESYSTEM
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C17
-          stepCounter: S1
-        config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(45)
         defaultValue: ""
         description: ""
         name: FIRSTNAME
@@ -336,10 +203,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C18
+          columnCounter: C11
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(45)
         defaultValue: ""
         description: ""
         name: LASTNAME
@@ -355,10 +222,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C19
+          columnCounter: C12
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE1
@@ -374,10 +241,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C20
+          columnCounter: C13
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE2
@@ -393,10 +260,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C21
+          columnCounter: C14
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(60)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE3
@@ -412,10 +279,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C22
+          columnCounter: C15
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: CITY
@@ -431,10 +298,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C23
+          columnCounter: C16
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: STATE
@@ -450,10 +317,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C24
+          columnCounter: C17
           stepCounter: S1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(50)
         defaultValue: ""
         description: ""
         name: POSTALCODE
@@ -464,8 +331,179 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: S1
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: ACCOUNTCLOSEDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: S1
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: ACCOUNTCREATIONDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: S1
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: DELIQUENCYSTATUSNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: S1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FIRSTTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: S1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SECONDTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: S1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: GWROWNUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: S1
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C25
+          stepCounter: S1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ISACTIVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C26
+          stepCounter: S1
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: LEGACYSOURCESYSTEM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
   name: BC_ACCOUNT
-  schema: ""
+  schema: "RAW"
   sqlType: Source
   type: sourceInput
   version: 1
