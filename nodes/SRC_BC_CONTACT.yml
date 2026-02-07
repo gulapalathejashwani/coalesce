@@ -1,0 +1,84 @@
+fileVersion: 1
+id: 'S_BC_CONTACT'
+name: BC_CONTACT
+operation:
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Source for BC_CONTACT"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 'C1'
+          stepCounter: 'S_BC_CONTACT'
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences: []
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 'C2'
+          stepCounter: 'S_BC_CONTACT'
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences: []
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 'C3'
+          stepCounter: 'S_BC_CONTACT'
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences: []
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 'C4'
+          stepCounter: 'S_BC_CONTACT'
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences: []
+        transform: ""
+        uniqueKey: false
+  name: BC_CONTACT
+  schema: "RAW"
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
