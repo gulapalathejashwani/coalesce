@@ -1,0 +1,460 @@
+fileVersion: 1
+id: STG_DIMBILLINGACCOUNT
+name: STG_DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTTYPENAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: PARENTACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BILLINGLEVELNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SEGMENT
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SERVICETIERNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SECURITYZONE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LASTNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C11
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C12
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C14
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C15
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C16
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCLOSEDATE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCREATIONDATE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DELIQUENCYSTATUSNAME
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: FIRSTTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: SECONDTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: GWROWNUMBER
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C25
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ISACTIVE
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C26
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LEGACYSOURCESYSTEM
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C27
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: EDWBEANVERSION
+        nullable: true
+        sourceColumnReferences: []
+        
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C28
+          stepCounter: STG_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: BATCHID
+        nullable: true
+        sourceColumnReferences: []
+        
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BC_ACCOUNT: SRC_BC_ACCOUNT
+        customSQL:
+          customSQL: |
+            WITH ParentAcct AS
+            (
+            	SELECT pa.OwnerID 
+            	     , CAST(act.AccountNumber AS INTEGER)         AS ParentAccountNumber
+                     , CONCAT(pa.BeanVersion,act.BeanVersion) AS BeanVersion
+                     , act.UpdateTime
+            	FROM {{ ref('SRC', 'BC_PARENTACCT') }} pa
+            	JOIN {{ ref('SRC', 'BC_ACCOUNT') }} act ON act.ID = pa.ForeignEntityID
+            )
+            ,InsuredInfo AS
+            (
+            	SELECT ac.InsuredAccountID  AS AccountID 
+            	     , c.FirstName 
+            	     , c.LastName
+            	     , a.AddressLine1 
+            		 , a.AddressLine2 
+            		 , a.AddressLine3 
+            		 , a.City 
+            		 , a.PostalCode 
+                     , tls.NAME       AS "State"
+            	     , CONCAT(ac.BeanVersion,acr.BeanVersion,c.BeanVersion ,a.BeanVersion) AS BeanVersion
+            		 , ac.UpdateTime  AS ac_UpdateTime
+            		 , acr.UpdateTime AS acr_UpdateTime
+            		 , c.UpdateTime   AS c_UpdateTime
+            		 , a.UpdateTime   AS a_UpdateTime
+            	FROM {{ ref('SRC', 'BC_ACCOUNTCONTACT') }} ac
+            	JOIN {{ ref('SRC', 'BC_ACCOUNTCONTACTROLE') }} acr ON acr.AccountContactID = ac.ID
+            	JOIN {{ ref('SRC', 'BCTL_ACCOUNTROLE') }} tlar     ON tlar.ID              = acr.Role
+            	LEFT JOIN {{ ref('SRC', 'BC_CONTACT') }} c         ON c.ID				   = ac.ContactID
+            	LEFT JOIN {{ ref('SRC', 'BC_ADDRESS') }} a         ON a.ID				   = c.PrimaryAddressID
+            	LEFT JOIN {{ ref('SRC', 'BCTL_STATE') }} tls       ON tls.ID				   = a.State
+            	WHERE tlar.TYPECODE = 'insured'
+            )
+            SELECT DISTINCT dt.AccountNumber 
+            	 , dt.AccountName
+            	 , CAST(at.NAME  AS VARCHAR(50))  AS AccountTypeName
+            	 , ParentAcct.ParentAccountNumber
+            	 , CAST(bl.NAME  AS VARCHAR(100)) AS BillingLevelName
+            	 , CAST(bas.NAME AS VARCHAR(50))  AS Segment
+            	 , CAST(cst.NAME AS VARCHAR(50))  AS ServiceTierName
+            	 , sz.Name                        AS SecurityZone
+            	 , InsuredInfo.FirstName
+            	 , InsuredInfo.LastName
+            	 , InsuredInfo.AddressLine1
+            	 , InsuredInfo.AddressLine2
+            	 , InsuredInfo.AddressLine3
+            	 , CAST(InsuredInfo.City       AS VARCHAR(50)) AS City
+            	 , CAST(InsuredInfo."State"    AS VARCHAR(50)) AS State
+            	 , CAST(InsuredInfo.PostalCode AS VARCHAR(50)) AS PostalCode
+            	 , dt.CloseDate                                AS AccountCloseDate
+            	 , dt.CreateTime						   AS AccountCreationDate
+            	 , CAST(tlds.NAME AS VARCHAR(50))			   AS DeliquencyStatusName
+            	 ,dt.FirstTwicePerMthInvoiceDOM				   AS FirstTwicePerMonthInvoiceDayOfMonth
+            	 , dt.SecondTwicePerMthInvoiceDOM			   AS SecondTwicePerMonthInvoiceDayOfMonth
+            	 , dt.PublicID
+            	 , dt.ID                                       AS GWRowNumber
+            	 , CAST(CONCAT(dt.BeanVersion ,ParentAcct.BeanVersion
+            	 , sz.BeanVersion) AS VARCHAR(20)) AS BeanVersion
+            	 , CASE dt.Retired WHEN 0 THEN 1 ELSE 0 END AS IsActive,
+            	 'WC' AS LegacySourceSystem
+                 , lkp.BeanVersion AS EDWBeanVersion -- From lookup
+                 , {{ env_var('BATCH_ID') }} AS BatchID -- Derived column
+            FROM {{ ref('SRC', 'BC_ACCOUNT') }} dt
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTTYPE') }} at			ON at.ID					= dt.AccountType
+            LEFT JOIN ParentAcct							ON ParentAcct.OwnerID		= dt.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_BILLINGLEVEL') }} bl			ON bl.ID					= dt.BillingLevel
+            LEFT JOIN {{ ref('SRC', 'BCTL_CUSTOMERSERVICETIER') }} cst	ON cst.ID					= dt.ServiceTier
+            LEFT JOIN {{ ref('SRC', 'BC_SECURITYZONE') }} sz			ON sz.ID				    = dt.SecurityZoneID
+            LEFT JOIN InsuredInfo							ON InsuredInfo.AccountID	= dt.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_DELINQUENCYSTATUS') }} tlds	ON tlds.ID					= dt.DelinquencyStatus
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTSEGMENT') }} bas		ON bas.ID					= dt.Segment
+            LEFT JOIN {{ ref('SRC', 'DIMBILLINGACCOUNT') }} lkp ON lkp.Publicid = dt.PublicID -- Lookup as LEFT JOIN
+            WHERE
+            (
+            dt.UpdateTime				>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR 
+            ParentAcct.UpdateTime		>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR
+            sz.UpdateTime				>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR
+            InsuredInfo.ac_UpdateTime		>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR
+            InsuredInfo.acr_UpdateTime		>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR
+            InsuredInfo.c_UpdateTime		>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE)) OR
+            InsuredInfo.a_UpdateTime		>= DATEADD(D,{{ env_var('INCREMENT_DAYS') }},CAST(GETDATE() AS DATE))
+            )
+        dependencies:
+          - locationName: SRC
+            nodeName: DIMBILLINGACCOUNT
+          - locationName: SRC
+            nodeName: BC_ACCOUNT
+          - locationName: SRC
+            nodeName: BC_PARENTACCT
+          - locationName: SRC
+            nodeName: BC_ACCOUNTCONTACT
+          - locationName: SRC
+            nodeName: BC_ACCOUNTCONTACTROLE
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTROLE
+          - locationName: SRC
+            nodeName: BC_CONTACT
+          - locationName: SRC
+            nodeName: BC_ADDRESS
+          - locationName: SRC
+            nodeName: BCTL_STATE
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTTYPE
+          - locationName: SRC
+            nodeName: BCTL_BILLINGLEVEL
+          - locationName: SRC
+            nodeName: BCTL_CUSTOMERSERVICETIER
+          - locationName: SRC
+            nodeName: BC_SECURITYZONE
+          - locationName: SRC
+            nodeName: BCTL_DELINQUENCYSTATUS
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTSEGMENT
+        join:
+          joinCondition: |
+            FROM ({{ customSQL }}) AS STG_DIMBILLINGACCOUNT
+        name: STG_DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: STG_DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
