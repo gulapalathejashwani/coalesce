@@ -1,0 +1,169 @@
+fileVersion: 1
+id: SBCACCOUNT
+name: BC_ACCOUNT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: CREATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: CLOSEDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: PUBLICID
+        nullable: true
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: BIGINT
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: SBCACCOUNT
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: RETIRED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BC_ACCOUNT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
