@@ -1,0 +1,628 @@
+fileVersion: 1
+id: S_STGDIMBILLINGACCOUNT
+name: STG_DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTTYPENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: PARENTACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BILLINGLEVELNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SERVICETIERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SECURITYZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C11
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C12
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C14
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C15
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C16
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCLOSEDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCREATIONDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DELIQUENCYSTATUSNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: FIRSTTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: SECONDTWICEPERMONTHINVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: GWROWNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C25
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ISACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C26
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LEGACYSOURCESYSTEM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C27
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: EDWBEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C28
+          stepCounter: S_STGDIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: BATCHID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DT: S_STGDIMBILLINGACCOUNT
+        customSQL:
+          customSQL: |
+            WITH PARENTACCT AS
+            (
+            	SELECT PA.OWNERID
+            	     , CAST(ACT.ACCOUNTNUMBER AS INT) AS PARENTACCOUNTNUMBER
+                     , CONCAT(PA.BEANVERSION, ACT.BEANVERSION) AS BEANVERSION
+                     , ACT.UPDATETIME
+            	FROM {{ ref('SRC', 'BC_PARENTACCT') }} PA
+            	JOIN {{ ref('SRC', 'BC_ACCOUNT') }} ACT ON ACT.ID = PA.FOREIGNENTITYID
+            ),
+            INSUREDINFO AS
+            (
+            	SELECT AC.INSUREDACCOUNTID AS ACCOUNTID
+            	     , C.FIRSTNAME
+            	     , C.LASTNAME
+            	     , A.ADDRESSLINE1
+            		 , A.ADDRESSLINE2
+            		 , A.ADDRESSLINE3
+            		 , A.CITY
+            		 , A.POSTALCODE
+                     , TLS.NAME AS STATE
+            	     , CONCAT(AC.BEANVERSION, ACR.BEANVERSION, C.BEANVERSION, A.BEANVERSION) AS BEANVERSION
+            		 , AC.UPDATETIME AS AC_UPDATETIME
+            		 , ACR.UPDATETIME AS ACR_UPDATETIME
+            		 , C.UPDATETIME AS C_UPDATETIME
+            		 , A.UPDATETIME AS A_UPDATETIME
+            	FROM {{ ref('SRC', 'BC_ACCOUNTCONTACT') }} AC
+            	JOIN {{ ref('SRC', 'BCTL_ACCOUNTCONTACTROLE') }} ACR ON ACR.ACCOUNTCONTACTID = AC.ID
+            	JOIN {{ ref('SRC', 'BCTL_ACCOUNTROLE') }} TLAR ON TLAR.ID = ACR.ROLE
+            	LEFT JOIN {{ ref('SRC', 'BC_CONTACT') }} C ON C.ID = AC.CONTACTID
+            	LEFT JOIN {{ ref('SRC', 'BC_ADDRESS') }} A ON A.ID = C.PRIMARYADDRESSID
+            	LEFT JOIN {{ ref('SRC', 'BCTL_STATE') }} TLS ON TLS.ID = A.STATE
+            	WHERE TLAR.TYPECODE = 'insured'
+            )
+            SELECT DISTINCT
+                DT.ACCOUNTNUMBER,
+                DT.ACCOUNTNAME,
+                CAST(AT.NAME AS VARCHAR(50)) AS ACCOUNTTYPENAME,
+                PARENTACCT.PARENTACCOUNTNUMBER,
+                CAST(BL.NAME AS VARCHAR(100)) AS BILLINGLEVELNAME,
+                CAST(BAS.NAME AS VARCHAR(50)) AS SEGMENT,
+                CAST(CST.NAME AS VARCHAR(50)) AS SERVICETIERNAME,
+                SZ.NAME AS SECURITYZONE,
+                INSUREDINFO.FIRSTNAME,
+                INSUREDINFO.LASTNAME,
+                INSUREDINFO.ADDRESSLINE1,
+                INSUREDINFO.ADDRESSLINE2,
+                INSUREDINFO.ADDRESSLINE3,
+                CAST(INSUREDINFO.CITY AS VARCHAR(50)) AS CITY,
+                CAST(INSUREDINFO.STATE AS VARCHAR(50)) AS STATE,
+                CAST(INSUREDINFO.POSTALCODE AS VARCHAR(50)) AS POSTALCODE,
+                DT.CLOSEDATE AS ACCOUNTCLOSEDATE,
+                DT.CREATETIME AS ACCOUNTCREATIONDATE,
+                CAST(TLDS.NAME AS VARCHAR(50)) AS DELIQUENCYSTATUSNAME,
+                DT.FIRSTTWICEPERMTHINVOICEDOM AS FIRSTTWICEPERMONTHINVOICEDAYOFMONTH,
+                DT.SECONDTWICEPERMTHINVOICEDOM AS SECONDTWICEPERMONTHINVOICEDAYOFMONTH,
+                DT.PUBLICID,
+                DT.ID AS GWROWNUMBER,
+                CAST(CONCAT(DT.BEANVERSION, PARENTACCT.BEANVERSION, SZ.BEANVERSION) AS VARCHAR(20)) AS BEANVERSION,
+                CASE DT.RETIRED WHEN 0 THEN 1 ELSE 0 END AS ISACTIVE,
+                'WC' AS LEGACYSOURCESYSTEM,
+                LKP.BEANVERSION AS EDWBEANVERSION,
+                {{ var('BATCHID') }} AS BATCHID
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTTYPE') }} AT ON AT.ID = DT.ACCOUNTTYPE
+            LEFT JOIN PARENTACCT ON PARENTACCT.OWNERID = DT.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_BILLINGLEVEL') }} BL ON BL.ID = DT.BILLINGLEVEL
+            LEFT JOIN {{ ref('SRC', 'BCTL_CUSTOMERSERVICETIER') }} CST ON CST.ID = DT.SERVICETIER
+            LEFT JOIN {{ ref('SRC', 'BC_SECURITYZONE') }} SZ ON SZ.ID = DT.SECURITYZONEID
+            LEFT JOIN INSUREDINFO ON INSUREDINFO.ACCOUNTID = DT.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_DELINQUENCYSTATUS') }} TLDS ON TLDS.ID = DT.DELINQUENCYSTATUS
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTSEGMENT') }} BAS ON BAS.ID = DT.SEGMENT
+            LEFT JOIN {{ ref('SRC', 'DIMBILLINGACCOUNT') }} LKP ON LKP.PUBLICID = DT.PUBLICID
+            WHERE
+            (
+                DT.UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                PARENTACCT.UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                SZ.UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                INSUREDINFO.AC_UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                INSUREDINFO.ACR_UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                INSUREDINFO.C_UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE()) OR
+                INSUREDINFO.A_UPDATETIME >= DATEADD(D, {{ var('INCREMENTDAYS') }}, CURRENT_DATE())
+            )
+            AND (LKP.PUBLICID IS NULL OR LKP.BEANVERSION != CAST(CONCAT(DT.BEANVERSION, PARENTACCT.BEANVERSION, SZ.BEANVERSION) AS VARCHAR(20)))
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_ACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_ACCOUNT') }} DT
+        name: BC_ACCOUNT
+        noLinkRefs: []
+      - aliases:
+          BCTL_ACCOUNTTYPE: BCTL_ACCOUNTTYPE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTTYPE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_ACCOUNTTYPE') }}
+        name: BCTL_ACCOUNTTYPE
+        noLinkRefs: []
+      - aliases:
+          BC_PARENTACCT: BC_PARENTACCT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_PARENTACCT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_PARENTACCT') }}
+        name: BC_PARENTACCT
+        noLinkRefs: []
+      - aliases:
+          BCTL_BILLINGLEVEL: BCTL_BILLINGLEVEL
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_BILLINGLEVEL
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_BILLINGLEVEL') }}
+        name: BCTL_BILLINGLEVEL
+        noLinkRefs: []
+      - aliases:
+          BCTL_CUSTOMERSERVICETIER: BCTL_CUSTOMERSERVICETIER
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_CUSTOMERSERVICETIER
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_CUSTOMERSERVICETIER') }}
+        name: BCTL_CUSTOMERSERVICETIER
+        noLinkRefs: []
+      - aliases:
+          BC_SECURITYZONE: BC_SECURITYZONE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_SECURITYZONE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_SECURITYZONE') }}
+        name: BC_SECURITYZONE
+        noLinkRefs: []
+      - aliases:
+          BCTL_DELINQUENCYSTATUS: BCTL_DELINQUENCYSTATUS
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_DELINQUENCYSTATUS
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_DELINQUENCYSTATUS') }}
+        name: BCTL_DELINQUENCYSTATUS
+        noLinkRefs: []
+      - aliases:
+          BCTL_ACCOUNTSEGMENT: BCTL_ACCOUNTSEGMENT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTSEGMENT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_ACCOUNTSEGMENT') }}
+        name: BCTL_ACCOUNTSEGMENT
+        noLinkRefs: []
+      - aliases:
+          BC_ACCOUNTCONTACT: BC_ACCOUNTCONTACT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_ACCOUNTCONTACT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_ACCOUNTCONTACT') }}
+        name: BC_ACCOUNTCONTACT
+        noLinkRefs: []
+      - aliases:
+          BCTL_ACCOUNTCONTACTROLE: BCTL_ACCOUNTCONTACTROLE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTCONTACTROLE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_ACCOUNTCONTACTROLE') }}
+        name: BCTL_ACCOUNTCONTACTROLE
+        noLinkRefs: []
+      - aliases:
+          BCTL_ACCOUNTROLE: BCTL_ACCOUNTROLE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTROLE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_ACCOUNTROLE') }}
+        name: BCTL_ACCOUNTROLE
+        noLinkRefs: []
+      - aliases:
+          BC_CONTACT: BC_CONTACT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_CONTACT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_CONTACT') }}
+        name: BC_CONTACT
+        noLinkRefs: []
+      - aliases:
+          BC_ADDRESS: BC_ADDRESS
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_ADDRESS
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_ADDRESS') }}
+        name: BC_ADDRESS
+        noLinkRefs: []
+      - aliases:
+          BCTL_STATE: BCTL_STATE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BCTL_STATE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BCTL_STATE') }}
+        name: BCTL_STATE
+        noLinkRefs: []
+      - aliases:
+          DIMBILLINGACCOUNT: DIMBILLINGACCOUNT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DIMBILLINGACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'DIMBILLINGACCOUNT') }}
+        name: DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: STG_DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
