@@ -1,0 +1,55 @@
+fileVersion: 1
+id: SRC_BCTL_DELINQUENCYSTATUS
+name: BCTL_DELINQUENCYSTATUS
+operation:
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: SRC_BCTL_DELINQUENCYSTATUS
+        config: {}
+        dataType: BIGINT
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: SRC_BCTL_DELINQUENCYSTATUS
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_DELINQUENCYSTATUS
+  schema: "RAW"
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
