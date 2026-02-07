@@ -1,0 +1,55 @@
+fileVersion: 1
+id: SBCTLACCOUNTROLE
+name: BCTL_ACCOUNTROLE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: SBCTLACCOUNTROLE
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: SBCTLACCOUNTROLE
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: TYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTROLE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
