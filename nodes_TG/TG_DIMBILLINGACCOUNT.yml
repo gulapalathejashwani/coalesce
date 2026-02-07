@@ -1,0 +1,354 @@
+fileVersion: 1
+id: T_DIMBILLINGACCOUNT
+name: DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: MERGE
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: PARENTACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SECURITYZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCLOSEDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C28
+                stepCounter: S_STGDIMBILLINGACCOUNT
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCREATIONDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: GWROWNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: BATCHID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C11
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ISACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C12
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTTYPENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SERVICETIERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C14
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BILLINGLEVELNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C15
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DELIQUENCYSTATUSNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C16
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LEGACYSOURCESYSTEM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C25
+          stepCounter: T_DIMBILLINGACCOUNT
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "" 
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DIMBILLINGACCOUNT: S_STGDIMBILLINGACCOUNT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: STG_DIMBILLINGACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT') }}
+        name: DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
