@@ -1,0 +1,445 @@
+fileVersion: 1
+id: S2
+name: STG_DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Stage transformation for DimBillingAccount with joins and business logic"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACCOUNTTYPENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(at.NAME AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: S2
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PARENTACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(act.ACCOUNTNUMBER AS INT)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BILLINGLEVELNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(bl.NAME AS VARCHAR(100))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(bas.NAME AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SERVICETIERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(cst.NAME AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SECURITYZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "sz.NAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "InsuredInfo.FIRSTNAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "InsuredInfo.LASTNAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C11
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "InsuredInfo.ADDRESSLINE1"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C12
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "InsuredInfo.ADDRESSLINE2"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "InsuredInfo.ADDRESSLINE3"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C14
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(InsuredInfo.CITY AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C15
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(InsuredInfo.STATE AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C16
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(InsuredInfo.POSTALCODE AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: S2
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCLOSEDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C8
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: S2
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACCOUNTCREATIONDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C9
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DELIQUENCYSTATUSNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(tlds.NAME AS VARCHAR(50))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: S2
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: FIRSTTWICEPERMONTH INVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C11
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: S2
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: SECONDTWICEPERMONTH INVOICEDAYOFMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C12
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C13
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: S2
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: GWROWNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C1
+                stepCounter: S1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CONCAT(dt.BEANVERSION, ParentAcct.BEANVERSION, sz.BEANVERSION) AS VARCHAR(20))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C25
+          stepCounter: S2
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ISACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CASE dt.RETIRED WHEN 0 THEN 1 ELSE 0 END"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C26
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LEGACYSOURCESYSTEM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'WC'"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BC_ACCOUNT: S1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_ACCOUNT
+        join:
+          joinCondition: |
+            WITH ParentAcct AS (
+              SELECT pa.OWNERID, 
+                     CAST(act.ACCOUNTNUMBER AS INT) AS PARENTACCOUNTNUMBER,
+                     CONCAT(pa.BEANVERSION, act.BEANVERSION) AS BEANVERSION,
+                     act.UPDATETIME
+              FROM {{ ref('SRC', 'BC_PARENTACCT') }} pa
+              JOIN {{ ref('SRC', 'BC_ACCOUNT') }} act ON act.ID = pa.FOREIGNENTITYID
+            ),
+            InsuredInfo AS (
+              SELECT ac.INSUREDACCOUNTID AS ACCOUNTID,
+                     c.FIRSTNAME,
+                     c.LASTNAME,
+                     a.ADDRESSLINE1,
+                     a.ADDRESSLINE2,
+                     a.ADDRESSLINE3,
+                     a.CITY,
+                     a.POSTALCODE,
+                     tls.NAME AS STATE,
+                     CONCAT(ac.BEANVERSION, acr.BEANVERSION, c.BEANVERSION, a.BEANVERSION) AS BEANVERSION,
+                     ac.UPDATETIME AS ac_UPDATETIME,
+                     acr.UPDATETIME AS acr_UPDATETIME,
+                     c.UPDATETIME AS c_UPDATETIME,
+                     a.UPDATETIME AS a_UPDATETIME
+              FROM {{ ref('SRC', 'BC_ACCOUNTCONTACT') }} ac
+              JOIN {{ ref('SRC', 'BC_ACCOUNTCONTACTROLE') }} acr ON acr.ACCOUNTCONTACTID = ac.ID
+              JOIN {{ ref('SRC', 'BCTL_ACCOUNTROLE') }} tlar ON tlar.ID = acr.ROLE
+              LEFT JOIN {{ ref('SRC', 'BC_CONTACT') }} c ON c.ID = ac.CONTACTID
+              LEFT JOIN {{ ref('SRC', 'BC_ADDRESS') }} a ON a.ID = c.PRIMARYADDRESSID
+              LEFT JOIN {{ ref('SRC', 'BCTL_STATE') }} tls ON tls.ID = a.STATE
+              WHERE tlar.TYPECODE = 'insured'
+            )
+            SELECT DISTINCT 
+              dt.ACCOUNTNUMBER,
+              dt.ACCOUNTNAME,
+              CAST(at.NAME AS VARCHAR(50)) AS ACCOUNTTYPENAME,
+              ParentAcct.PARENTACCOUNTNUMBER,
+              CAST(bl.NAME AS VARCHAR(100)) AS BILLINGLEVELNAME,
+              CAST(bas.NAME AS VARCHAR(50)) AS SEGMENT,
+              CAST(cst.NAME AS VARCHAR(50)) AS SERVICETIERNAME,
+              sz.NAME AS SECURITYZONE,
+              InsuredInfo.FIRSTNAME,
+              InsuredInfo.LASTNAME,
+              InsuredInfo.ADDRESSLINE1,
+              InsuredInfo.ADDRESSLINE2,
+              InsuredInfo.ADDRESSLINE3,
+              CAST(InsuredInfo.CITY AS VARCHAR(50)) AS CITY,
+              CAST(InsuredInfo.STATE AS VARCHAR(50)) AS STATE,
+              CAST(InsuredInfo.POSTALCODE AS VARCHAR(50)) AS POSTALCODE,
+              dt.CLOSEDATE AS ACCOUNTCLOSEDATE,
+              dt.CREATETIME AS ACCOUNTCREATIONDATE,
+              CAST(tlds.NAME AS VARCHAR(50)) AS DELIQUENCYSTATUSNAME,
+              dt.FIRSTTWICEPERMTHINVOICEDOM AS FIRSTTWICEPERMONTHINVOICEDAYOFMONTH,
+              dt.SECONDTWICEPERMTHINVOICEDOM AS SECONDTWICEPERMONTHINVOICEDAYOFMONTH,
+              dt.PUBLICID,
+              dt.ID AS GWROWNUMBER,
+              CAST(CONCAT(dt.BEANVERSION, ParentAcct.BEANVERSION, sz.BEANVERSION) AS VARCHAR(20)) AS BEANVERSION,
+              CASE dt.RETIRED WHEN 0 THEN 1 ELSE 0 END AS ISACTIVE,
+              'WC' AS LEGACYSOURCESYSTEM
+            FROM {{ ref('SRC', 'BC_ACCOUNT') }} dt
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTTYPE') }} at ON at.ID = dt.ACCOUNTTYPE
+            LEFT JOIN ParentAcct ON ParentAcct.OWNERID = dt.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_BILLINGLEVEL') }} bl ON bl.ID = dt.BILLINGLEVEL
+            LEFT JOIN {{ ref('SRC', 'BCTL_CUSTOMERSERVICETIER') }} cst ON cst.ID = dt.SERVICETIER
+            LEFT JOIN {{ ref('SRC', 'BC_SECURITYZONE') }} sz ON sz.ID = dt.SECURITYZONEID
+            LEFT JOIN InsuredInfo ON InsuredInfo.ACCOUNTID = dt.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_DELINQUENCYSTATUS') }} tlds ON tlds.ID = dt.DELINQUENCYSTATUS
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTSEGMENT') }} bas ON bas.ID = dt.SEGMENT
+            WHERE (
+              dt.UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              ParentAcct.UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              sz.UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              InsuredInfo.ac_UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              InsuredInfo.acr_UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              InsuredInfo.c_UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE)) OR
+              InsuredInfo.a_UPDATETIME >= DATEADD(DAY, -7, CAST(CURRENT_TIMESTAMP() AS DATE))
+            )
+        name: STG_DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: STG_DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
