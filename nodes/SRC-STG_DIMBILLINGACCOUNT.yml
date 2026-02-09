@@ -413,12 +413,17 @@ operation:
           stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
         config: {}
         dataType: STRING
-        description: "Conditional split flag: 'UNCHANGED' if BEANVERSION = EDW_BEANVERSION, 'UPDATE' if different and EDW_BEANVERSION exists, 'INSERT' if EDW_BEANVERSION is null"
+        description: "Conditional split flag based on BeanVersion comparison"
         name: CHANGE_FLAG
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: CASE WHEN EDW_BEANVERSION IS NULL THEN 'INSERT' WHEN BEANVERSION = EDW_BEANVERSION THEN 'UNCHANGED' ELSE 'UPDATE' END
+            transform: |
+              CASE
+                WHEN DIMBILLINGACCOUNT.BEANVERSION IS NULL THEN 'INSERT'
+                WHEN BC_ACCOUNT.BEANVERSION = DIMBILLINGACCOUNT.BEANVERSION THEN 'UNCHANGED'
+                ELSE 'UPDATE'
+              END
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
