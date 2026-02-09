@@ -4,7 +4,7 @@ name: BC_ADDRESS
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: "Source table BC_ADDRESS from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: S7
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE1
@@ -54,7 +54,7 @@ operation:
           columnCounter: C3
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE2
@@ -73,7 +73,7 @@ operation:
           columnCounter: C4
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE3
@@ -92,7 +92,7 @@ operation:
           columnCounter: C5
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: CITY
@@ -111,7 +111,7 @@ operation:
           columnCounter: C6
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: POSTALCODE
@@ -130,7 +130,7 @@ operation:
           columnCounter: C7
           stepCounter: S7
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: STATE
@@ -149,7 +149,7 @@ operation:
           columnCounter: C8
           stepCounter: S7
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -168,7 +168,7 @@ operation:
           columnCounter: C9
           stepCounter: S7
         config: {}
-        dataType: TIMESTAMP
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: UPDATETIME
