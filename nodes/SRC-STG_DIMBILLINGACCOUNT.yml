@@ -159,34 +159,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC11
-          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: FIRSTTWICEPERMTHINVOICEDOM
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C11
-                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: SC12
-          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: SECONDTWICEPERMTHINVOICEDOM
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: C12
-                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: SC13
           stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
         config: {}
@@ -406,14 +378,14 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: "CURRENT_TIMESTAMP()"
+            transform: CURRENT_TIMESTAMP()
       - appliedColumnTests: {}
         columnReference:
           columnCounter: SC29
           stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
         config: {}
         dataType: STRING
-        description: "Conditional split flag based on BeanVersion comparison"
+        description: Conditional split flag based on BeanVersion comparison
         name: CHANGE_FLAG
         nullable: true
         sourceColumnReferences:
