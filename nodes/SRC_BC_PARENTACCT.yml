@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S3
+id: S2
 name: BC_PARENTACCT
 operation:
-  database: PC_COALESCE_DB
+  database: ""
   deployEnabled: true
-  description: ""
+  description: "Source table BC_PARENTACCT from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -14,9 +14,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: S3
+          stepCounter: S2
         config: {}
-        dataType: BIGINT
+        dataType: INTEGER
         defaultValue: ""
         description: ""
         name: OWNERID
@@ -33,9 +33,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: S3
+          stepCounter: S2
         config: {}
-        dataType: BIGINT
+        dataType: INTEGER
         defaultValue: ""
         description: ""
         name: FOREIGNENTITYID
@@ -52,9 +52,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: S3
+          stepCounter: S2
         config: {}
-        dataType: VARCHAR(20)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -71,9 +71,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: S3
+          stepCounter: S2
         config: {}
-        dataType: TIMESTAMP_NTZ
+        dataType: DATETIME
         defaultValue: ""
         description: ""
         name: UPDATETIME
@@ -85,8 +85,9 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_PARENTACCT
-  schema: RAW
+  schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
+
 type: Node
