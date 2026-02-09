@@ -1,0 +1,55 @@
+fileVersion: 1
+id: bc9a1f23-4567-89ab-cdef-0123456789a9
+name: BCTL_ACCOUNTTYPE
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BCTL_ACCOUNTTYPE from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a9
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a9
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTTYPE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
