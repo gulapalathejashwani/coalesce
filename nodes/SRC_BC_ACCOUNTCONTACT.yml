@@ -4,7 +4,7 @@ name: BC_ACCOUNTCONTACT
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: "Source table BC_ACCOUNTCONTACT from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: S3
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: INSUREDACCOUNTID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: S3
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: CONTACTID
@@ -54,7 +54,7 @@ operation:
           columnCounter: C3
           stepCounter: S3
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ID
@@ -73,7 +73,7 @@ operation:
           columnCounter: C4
           stepCounter: S3
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -92,7 +92,7 @@ operation:
           columnCounter: C5
           stepCounter: S3
         config: {}
-        dataType: TIMESTAMP
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: UPDATETIME
