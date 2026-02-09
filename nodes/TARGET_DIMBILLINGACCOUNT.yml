@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: "Target table for DimBillingAccount"
+  description: "Target table DIMBILLINGACCOUNT - materializes stage output"
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -22,7 +22,7 @@ operation:
           columnCounter: C1
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
         name: ACCOUNTNUMBER
         nullable: true
@@ -36,7 +36,7 @@ operation:
           columnCounter: C2
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: ACCOUNTNAME
         nullable: true
@@ -50,7 +50,7 @@ operation:
           columnCounter: C3
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: ACCOUNTTYPE_NAME
         nullable: true
@@ -64,7 +64,7 @@ operation:
           columnCounter: C4
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: BILLINGLEVEL_NAME
         nullable: true
@@ -78,7 +78,7 @@ operation:
           columnCounter: C5
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: SERVICETIER_NAME
         nullable: true
@@ -92,7 +92,7 @@ operation:
           columnCounter: C6
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: SECURITYZONE_NAME
         nullable: true
@@ -106,7 +106,7 @@ operation:
           columnCounter: C7
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: SEGMENT_NAME
         nullable: true
@@ -120,7 +120,7 @@ operation:
           columnCounter: C8
           stepCounter: TGT1
         config: {}
-        dataType: TIMESTAMP
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
         name: CLOSEDATE
         nullable: true
@@ -134,7 +134,7 @@ operation:
           columnCounter: C9
           stepCounter: TGT1
         config: {}
-        dataType: TIMESTAMP
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
         name: CREATETIME
         nullable: true
@@ -148,7 +148,7 @@ operation:
           columnCounter: C10
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: DELINQUENCYSTATUS_NAME
         nullable: true
@@ -162,7 +162,7 @@ operation:
           columnCounter: C11
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
         name: FIRSTTWICEPERMTHINVOICEDOM
         nullable: true
@@ -176,7 +176,7 @@ operation:
           columnCounter: C12
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
         name: SECONDTWICEPERMTHINVOICEDOM
         nullable: true
@@ -190,7 +190,7 @@ operation:
           columnCounter: C13
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: PUBLICID
         nullable: true
@@ -204,9 +204,9 @@ operation:
           columnCounter: C14
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
-        name: BC_ACCOUNT_ID
+        name: ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -218,7 +218,7 @@ operation:
           columnCounter: C15
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: BEANVERSION
         nullable: true
@@ -232,7 +232,7 @@ operation:
           columnCounter: C16
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
         name: RETIRED
         nullable: true
@@ -246,7 +246,7 @@ operation:
           columnCounter: C17
           stepCounter: TGT1
         config: {}
-        dataType: TIMESTAMP
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
         name: UPDATETIME
         nullable: true
@@ -260,9 +260,9 @@ operation:
           columnCounter: C18
           stepCounter: TGT1
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         description: ""
-        name: PARENTACCT_FOREIGNENTITYID
+        name: PARENT_FOREIGNENTITYID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -274,7 +274,7 @@ operation:
           columnCounter: C19
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: CONTACT_FIRSTNAME
         nullable: true
@@ -288,7 +288,7 @@ operation:
           columnCounter: C20
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: CONTACT_LASTNAME
         nullable: true
@@ -302,7 +302,7 @@ operation:
           columnCounter: C21
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: ADDRESS_LINE1
         nullable: true
@@ -316,7 +316,7 @@ operation:
           columnCounter: C22
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: ADDRESS_LINE2
         nullable: true
@@ -330,7 +330,7 @@ operation:
           columnCounter: C23
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: ADDRESS_LINE3
         nullable: true
@@ -344,7 +344,7 @@ operation:
           columnCounter: C24
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: CITY
         nullable: true
@@ -358,7 +358,7 @@ operation:
           columnCounter: C25
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: POSTALCODE
         nullable: true
@@ -372,7 +372,7 @@ operation:
           columnCounter: C26
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: STATE_NAME
         nullable: true
@@ -386,7 +386,7 @@ operation:
           columnCounter: C27
           stepCounter: TGT1
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         description: ""
         name: EDW_BEANVERSION
         nullable: true
@@ -399,15 +399,15 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_DIMBILLINGACCOUNT_JOIN: STG1
+          STG_DIMBILLINGACCOUNT: STG1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: STG_DIMBILLINGACCOUNT_JOIN
+            nodeName: STG_DIMBILLINGACCOUNT
         join:
           joinCondition: |
-            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT_JOIN') }}
+            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT') }}
         name: DIMBILLINGACCOUNT
         noLinkRefs: []
   name: DIMBILLINGACCOUNT
