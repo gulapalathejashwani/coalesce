@@ -1,0 +1,435 @@
+fileVersion: 1
+id: tgt9a1f23-4567-89ab-cdef-0123456789c1
+name: DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: "Target table DIMBILLINGACCOUNT - materializes transformed data from Stage"
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC1
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC1
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC2
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC2
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC3
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ACCOUNTTYPE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC3
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC4
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: BILLINGLEVEL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC4
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC5
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: SERVICETIER_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC5
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC6
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: SECURITYZONE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC6
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC7
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: SEGMENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC7
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC8
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: CLOSEDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC8
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC9
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: CREATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC9
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC10
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: DELINQUENCYSTATUS_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC10
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC11
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: FIRSTTWICEPERMTHINVOICEDOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC11
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC12
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: SECONDTWICEPERMTHINVOICEDOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC12
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC13
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC13
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC14
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC14
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC15
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC15
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC16
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: RETIRED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC16
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC17
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC17
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC18
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: PARENTACCT_FOREIGNENTITYID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC18
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC19
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CONTACT_FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC19
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC20
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CONTACT_LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC20
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC21
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC21
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC22
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC22
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC23
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC23
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC24
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC24
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC25
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC25
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC26
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC26
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC27
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: BATCHID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC28
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: TC28
+          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CHANGE_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: SC29
+                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DIMBILLINGACCOUNT: stg9a1f23-4567-89ab-cdef-0123456789b1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: STG_DIMBILLINGACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT') }}
+            WHERE CHANGE_FLAG IN ('INSERT', 'UPDATE')
+        name: DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+
+type: Node
