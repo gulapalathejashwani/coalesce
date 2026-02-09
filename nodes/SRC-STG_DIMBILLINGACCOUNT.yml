@@ -400,13 +400,13 @@ operation:
           columnCounter: SC28
           stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
         config: {}
-        dataType: INTEGER
+        dataType: TIMESTAMP
         description: Derived BatchID from transformation
         name: BATCHID
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: "@[User::BatchID]"
+            transform: "CURRENT_TIMESTAMP()"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: SC29
