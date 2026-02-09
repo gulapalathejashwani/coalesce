@@ -1,5 +1,5 @@
 fileVersion: 1
-id: TGT_DIM_BA_001
+id: TGT1
 name: DIMBILLINGACCOUNT
 operation:
   config:
@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: "Target table for DimBillingAccount"
+  description: "Target table DIMBILLINGACCOUNT - materializes the joined and transformed data from Stage"
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -19,367 +19,353 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC1
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C1
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: PUBLICID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC1
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC2
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: VARCHAR(255)
+        dataType: INTEGER
         description: ""
         name: ACCOUNTNUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC2
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C1
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC3
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C2
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(255)
+        dataType: STRING
         description: ""
         name: ACCOUNTNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC3
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C2
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC4
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C3
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: STRING
         description: ""
-        name: ACCOUNTTYPENAME
+        name: ACCOUNTTYPE_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC4
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C3
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC5
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C4
+          stepCounter: TGT1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: STRING
         description: ""
-        name: PARENTACCOUNTNUMBER
+        name: BILLINGLEVEL_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC5
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C4
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC6
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C5
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(100)
+        dataType: STRING
         description: ""
-        name: BILLINGLEVELNAME
+        name: SERVICETIER_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC6
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C5
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC7
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C6
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: STRING
         description: ""
-        name: SEGMENT
+        name: SECURITYZONE_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC7
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C6
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC8
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C7
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(50)
+        dataType: STRING
         description: ""
-        name: SERVICETIERNAME
+        name: SEGMENT_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC8
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C7
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC9
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C8
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: DATETIME
         description: ""
-        name: SECURITYZONE
+        name: CLOSEDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC9
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C8
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC10
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C9
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(45)
+        dataType: DATETIME
         description: ""
-        name: FIRSTNAME
+        name: CREATETIME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC10
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C9
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC11
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C10
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(45)
+        dataType: STRING
         description: ""
-        name: LASTNAME
+        name: DELINQUENCYSTATUS_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC11
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C10
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC12
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C11
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: INTEGER
         description: ""
-        name: ADDRESSLINE1
+        name: FIRSTTWICEPERMTHINVOICEDOM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC12
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C11
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC13
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C12
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: INTEGER
         description: ""
-        name: ADDRESSLINE2
+        name: SECONDTWICEPERMTHINVOICEDOM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC13
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C12
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC14
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C13
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(60)
+        dataType: STRING
         description: ""
-        name: ADDRESSLINE3
+        name: PUBLICID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC14
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C13
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC15
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C14
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: CITY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC15
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC16
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: STATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC16
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC17
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: POSTALCODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC17
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC18
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: TIMESTAMP_NTZ
-        description: ""
-        name: ACCOUNTCLOSEDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC18
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC19
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: TIMESTAMP_NTZ
-        description: ""
-        name: ACCOUNTCREATIONDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC19
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC20
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: DELIQUENCYSTATUSNAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC20
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC21
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: GWROWNUMBER
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC21
-                stepCounter: STG_DIM_BA_001
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC22
-          stepCounter: TGT_DIM_BA_001
-        config: {}
-        dataType: VARCHAR(20)
+        dataType: STRING
         description: ""
         name: BEANVERSION
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC22
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C14
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC23
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C15
+          stepCounter: TGT1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: STRING
         description: ""
-        name: ISACTIVE
+        name: CONTACT_FIRSTNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC23
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C15
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC24
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C16
+          stepCounter: TGT1
         config: {}
-        dataType: VARCHAR(2)
+        dataType: STRING
         description: ""
-        name: LEGACYSOURCESYSTEM
+        name: CONTACT_LASTNAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC24
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C16
+                stepCounter: STG1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC25
-          stepCounter: TGT_DIM_BA_001
+          columnCounter: C17
+          stepCounter: TGT1
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: STRING
+        description: ""
+        name: ADDRESS_LINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C17
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: TGT1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS_LINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C18
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: TGT1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C19
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C20
+          stepCounter: TGT1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS_POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C20
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C21
+          stepCounter: TGT1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C21
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C22
+          stepCounter: TGT1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: PARENT_ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C22
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C23
+          stepCounter: TGT1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C23
+                stepCounter: STG1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: C24
+          stepCounter: TGT1
+        config: {}
+        dataType: STRING
         description: ""
         name: BATCHID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: SC25
-                stepCounter: STG_DIM_BA_001
+              - columnCounter: C24
+                stepCounter: STG1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_DIMBILLINGACCOUNT: STG_DIM_BA_001
+          STG_DIMBILLINGACCOUNT_JOIN: STG1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: STG_DIMBILLINGACCOUNT
+            nodeName: STG_DIMBILLINGACCOUNT_JOIN
         join:
           joinCondition: |
-            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT') }}
+            FROM {{ ref('SRC', 'STG_DIMBILLINGACCOUNT_JOIN') }}
         name: DIMBILLINGACCOUNT
         noLinkRefs: []
   name: DIMBILLINGACCOUNT
