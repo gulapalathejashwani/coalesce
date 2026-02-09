@@ -4,7 +4,7 @@ name: BCTL_STATE
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: "Source table BCTL_STATE from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: S8
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: S8
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: NAME
