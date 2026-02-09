@@ -406,7 +406,7 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: "CURRENT_TIMESTAMP()"
+            transform: "1"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: SC29
