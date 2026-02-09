@@ -1,0 +1,131 @@
+fileVersion: 1
+id: S6
+name: BC_CONTACT
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BC_CONTACT from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S6
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S6
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S6
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: LASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: S6
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: PRIMARYADDRESSID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: S6
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: S6
+        config: {}
+        dataType: DATETIME
+        defaultValue: ""
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BC_CONTACT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
