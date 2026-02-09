@@ -358,7 +358,7 @@ operation:
           columnCounter: TC27
           stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
         config: {}
-        dataType: INTEGER
+        dataType: TIMESTAMP
         description: ""
         name: BATCHID
         nullable: true
