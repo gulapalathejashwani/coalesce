@@ -10,7 +10,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: "Target table DIMBILLINGACCOUNT - materializes transformed data from Stage"
+  description: Target table DIMBILLINGACCOUNT - materializes transformed data from Stage
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -431,5 +431,4 @@ operation:
   sqlType: Stage
   type: sql
   version: 1
-
 type: Node

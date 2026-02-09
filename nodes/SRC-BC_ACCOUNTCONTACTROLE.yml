@@ -4,7 +4,7 @@ name: BC_ACCOUNTCONTACTROLE
 operation:
   database: ""
   deployEnabled: true
-  description: "Source table BC_ACCOUNTCONTACTROLE from GuideWire"
+  description: Source table BC_ACCOUNTCONTACTROLE from GuideWire
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a4
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ACCOUNTCONTACTID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a4
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ROLE
@@ -51,29 +51,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a4
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
           columnCounter: C4
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a4
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(20)
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -92,7 +73,7 @@ operation:
           columnCounter: C5
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a4
         config: {}
-        dataType: DATETIME
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: UPDATETIME
@@ -108,5 +89,4 @@ operation:
   sqlType: Source
   type: sourceInput
   version: 1
-
 type: Node

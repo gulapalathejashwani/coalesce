@@ -1,10 +1,10 @@
 fileVersion: 1
-id: bc9a1f23-4567-89ab-cdef-0123456789a8
-name: BCTL_STATE
+id: bc9a1f23-4567-89ab-cdef-0123456789ae
+name: BCTL_ACCOUNTSEGMENT
 operation:
   database: ""
   deployEnabled: true
-  description: "Source table BCTL_STATE from GuideWire"
+  description: Source table BCTL_ACCOUNTSEGMENT from GuideWire
   locationName: SRC
   metadata:
     columns:
@@ -13,10 +13,29 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
+          columnCounter: bc652ba8-b2ca-47c9-9feb-a8a630099ff1
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ae
         config: {}
-        dataType: INTEGER
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ae
+        config: {}
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ID
@@ -33,9 +52,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ae
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: NAME
@@ -46,10 +65,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: BCTL_STATE
+  name: BCTL_ACCOUNTSEGMENT
   schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
-
 type: Node

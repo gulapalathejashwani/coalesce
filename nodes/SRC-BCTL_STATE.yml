@@ -1,10 +1,10 @@
 fileVersion: 1
-id: bc9a1f23-4567-89ab-cdef-0123456789af
-name: DIMBILLINGACCOUNT
+id: bc9a1f23-4567-89ab-cdef-0123456789a8
+name: BCTL_STATE
 operation:
   database: ""
   deployEnabled: true
-  description: "Source table DIMBILLINGACCOUNT from GuideWire"
+  description: Source table BCTL_STATE from GuideWire
   locationName: SRC
   metadata:
     columns:
@@ -13,13 +13,32 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789af
+          columnCounter: 0ecced4b-2705-41aa-a664-07753d0dfd0c
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: PUBLICID
+        name: TYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -33,12 +52,12 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789af
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: BEANVERSION
+        name: NAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -46,10 +65,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: DIMBILLINGACCOUNT
+  name: BCTL_STATE
   schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
-
 type: Node

@@ -1,0 +1,514 @@
+fileVersion: 1
+id: stg9a1f23-4567-89ab-cdef-0123456789b1
+name: STG_DIMBILLINGACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Stage node performing all joins and transformations for DimBillingAccount
+  isMultisource: true
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC1
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACCOUNTNUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C1
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC2
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ACCOUNTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC3
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Account Type Name from lookup
+        name: ACCOUNTTYPE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC4
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Billing Level Name from lookup
+        name: BILLINGLEVEL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC5
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Service Tier Name from lookup
+        name: SERVICETIER_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC6
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Security Zone Name
+        name: SECURITYZONE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ac
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC7
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Account Segment Name from lookup
+        name: SEGMENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ae
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC8
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: CLOSEDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C8
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC9
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: CREATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C9
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC10
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Delinquency Status Name from lookup
+        name: DELINQUENCYSTATUS_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789ad
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC11
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: FIRSTTWICEPERMTHINVOICEDOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C11
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC12
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: SECONDTWICEPERMTHINVOICEDOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C12
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC13
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: PUBLICID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C13
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC14
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C14
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC15
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C15
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC16
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: RETIRED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C16
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC17
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C17
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC18
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: Parent Account Foreign Entity ID
+        name: PARENTACCT_FOREIGNENTITYID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC19
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Contact First Name
+        name: CONTACT_FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC20
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Contact Last Name
+        name: CONTACT_LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC21
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Address Line 1
+        name: ADDRESSLINE1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC22
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Address Line 2
+        name: ADDRESSLINE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC23
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Address Line 3
+        name: ADDRESSLINE3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C4
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC24
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: City
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C5
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC25
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: Postal Code
+        name: POSTALCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C6
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC26
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: State Name from lookup
+        name: STATE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC27
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: EDW BeanVersion from lookup for SCD comparison
+        name: EDW_BEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: bc9a1f23-4567-89ab-cdef-0123456789af
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC28
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: INTEGER
+        description: Derived BatchID from transformation
+        name: BATCHID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "@[User::BatchID]"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: SC29
+          stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
+        config: {}
+        dataType: STRING
+        description: "Conditional split flag: 'UNCHANGED' if BEANVERSION = EDW_BEANVERSION, 'UPDATE' if different and EDW_BEANVERSION exists, 'INSERT' if EDW_BEANVERSION is null"
+        name: CHANGE_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN EDW_BEANVERSION IS NULL THEN 'INSERT' WHEN BEANVERSION = EDW_BEANVERSION THEN 'UNCHANGED' ELSE 'UPDATE' END
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BCTL_ACCOUNTROLE: bc9a1f23-4567-89ab-cdef-0123456789a5
+          BCTL_ACCOUNTSEGMENT: bc9a1f23-4567-89ab-cdef-0123456789ae
+          BCTL_ACCOUNTTYPE: bc9a1f23-4567-89ab-cdef-0123456789a9
+          BCTL_BILLINGLEVEL: bc9a1f23-4567-89ab-cdef-0123456789aa
+          BCTL_CUSTOMERSERVICETIER: bc9a1f23-4567-89ab-cdef-0123456789ab
+          BCTL_DELINQUENCYSTATUS: bc9a1f23-4567-89ab-cdef-0123456789ad
+          BCTL_STATE: bc9a1f23-4567-89ab-cdef-0123456789a8
+          BC_ACCOUNT: bc9a1f23-4567-89ab-cdef-0123456789a1
+          BC_ACCOUNTCONTACT: bc9a1f23-4567-89ab-cdef-0123456789a3
+          BC_ACCOUNTCONTACTROLE: bc9a1f23-4567-89ab-cdef-0123456789a4
+          BC_ADDRESS: bc9a1f23-4567-89ab-cdef-0123456789a7
+          BC_CONTACT: bc9a1f23-4567-89ab-cdef-0123456789a6
+          BC_PARENTACCT: bc9a1f23-4567-89ab-cdef-0123456789a2
+          BC_SECURITYZONE: bc9a1f23-4567-89ab-cdef-0123456789ac
+          DIMBILLINGACCOUNT: bc9a1f23-4567-89ab-cdef-0123456789af
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: BC_ACCOUNT
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTTYPE
+          - locationName: SRC
+            nodeName: BC_PARENTACCT
+          - locationName: SRC
+            nodeName: BCTL_BILLINGLEVEL
+          - locationName: SRC
+            nodeName: BCTL_CUSTOMERSERVICETIER
+          - locationName: SRC
+            nodeName: BC_SECURITYZONE
+          - locationName: SRC
+            nodeName: BCTL_DELINQUENCYSTATUS
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTSEGMENT
+          - locationName: SRC
+            nodeName: BC_ACCOUNTCONTACT
+          - locationName: SRC
+            nodeName: BC_ACCOUNTCONTACTROLE
+          - locationName: SRC
+            nodeName: BCTL_ACCOUNTROLE
+          - locationName: SRC
+            nodeName: BC_CONTACT
+          - locationName: SRC
+            nodeName: BC_ADDRESS
+          - locationName: SRC
+            nodeName: BCTL_STATE
+          - locationName: SRC
+            nodeName: DIMBILLINGACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'BC_ACCOUNT') }} BC_ACCOUNT
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTTYPE') }} BCTL_ACCOUNTTYPE
+              ON BC_ACCOUNT.ACCOUNTTYPE = BCTL_ACCOUNTTYPE.ID
+            LEFT JOIN {{ ref('SRC', 'BC_PARENTACCT') }} BC_PARENTACCT
+              ON BC_PARENTACCT.OWNERID = BC_ACCOUNT.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_BILLINGLEVEL') }} BCTL_BILLINGLEVEL
+              ON BC_ACCOUNT.BILLINGLEVEL = BCTL_BILLINGLEVEL.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_CUSTOMERSERVICETIER') }} BCTL_CUSTOMERSERVICETIER
+              ON BC_ACCOUNT.SERVICETIER = BCTL_CUSTOMERSERVICETIER.ID
+            LEFT JOIN {{ ref('SRC', 'BC_SECURITYZONE') }} BC_SECURITYZONE
+              ON BC_ACCOUNT.SECURITYZONEID = BC_SECURITYZONE.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_DELINQUENCYSTATUS') }} BCTL_DELINQUENCYSTATUS
+              ON BC_ACCOUNT.DELINQUENCYSTATUS = BCTL_DELINQUENCYSTATUS.ID
+            LEFT JOIN {{ ref('SRC', 'BCTL_ACCOUNTSEGMENT') }} BCTL_ACCOUNTSEGMENT
+              ON BC_ACCOUNT.SEGMENT = BCTL_ACCOUNTSEGMENT.ID
+            LEFT JOIN {{ ref('SRC', 'BC_ACCOUNTCONTACT') }} BC_ACCOUNTCONTACT
+              ON BC_ACCOUNTCONTACT.INSUREDACCOUNTID = BC_ACCOUNT.ID
+            INNER JOIN {{ ref('SRC', 'BC_ACCOUNTCONTACTROLE') }} BC_ACCOUNTCONTACTROLE
+              ON BC_ACCOUNTCONTACTROLE.ACCOUNTCONTACTID = BC_ACCOUNTCONTACT.ID
+            INNER JOIN {{ ref('SRC', 'BCTL_ACCOUNTROLE') }} BCTL_ACCOUNTROLE
+              ON BCTL_ACCOUNTROLE.ID = BC_ACCOUNTCONTACTROLE.ROLE
+              AND BCTL_ACCOUNTROLE.TYPECODE = 'insured'
+            LEFT JOIN {{ ref('SRC', 'BC_CONTACT') }} BC_CONTACT
+              ON BC_CONTACT.ID = BC_ACCOUNTCONTACT.CONTACTID
+            LEFT JOIN {{ ref('SRC', 'BC_ADDRESS') }} BC_ADDRESS
+              ON BC_ADDRESS.ID = BC_CONTACT.PRIMARYADDRESSID
+            LEFT JOIN {{ ref('SRC', 'BCTL_STATE') }} BCTL_STATE
+              ON BCTL_STATE.ID = BC_ADDRESS.STATE
+            LEFT JOIN {{ ref('SRC', 'DIMBILLINGACCOUNT') }} DIMBILLINGACCOUNT
+              ON BC_ACCOUNT.PUBLICID = DIMBILLINGACCOUNT.PUBLICID
+        name: STG_DIMBILLINGACCOUNT
+        noLinkRefs: []
+  name: STG_DIMBILLINGACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

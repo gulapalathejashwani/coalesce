@@ -4,7 +4,7 @@ name: BC_ACCOUNT
 operation:
   database: ""
   deployEnabled: true
-  description: "Source table BC_ACCOUNT from GuideWire"
+  description: Source table BC_ACCOUNT from GuideWire
   locationName: SRC
   metadata:
     columns:
@@ -13,10 +13,48 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
+          columnCounter: C14
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: PUBLICID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
           columnCounter: C1
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
         name: ACCOUNTNUMBER
@@ -35,7 +73,7 @@ operation:
           columnCounter: C2
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(255)
         defaultValue: ""
         description: ""
         name: ACCOUNTNAME
@@ -54,7 +92,7 @@ operation:
           columnCounter: C3
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ACCOUNTTYPE
@@ -73,7 +111,7 @@ operation:
           columnCounter: C4
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: BILLINGLEVEL
@@ -92,7 +130,7 @@ operation:
           columnCounter: C5
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: SERVICETIER
@@ -111,7 +149,7 @@ operation:
           columnCounter: C6
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: SECURITYZONEID
@@ -127,10 +165,29 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
+          columnCounter: C10
+          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DELINQUENCYSTATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
           columnCounter: C7
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: SEGMENT
@@ -149,7 +206,7 @@ operation:
           columnCounter: C8
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: DATETIME
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: CLOSEDATE
@@ -168,7 +225,7 @@ operation:
           columnCounter: C9
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: DATETIME
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: CREATETIME
@@ -184,89 +241,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C10
+          columnCounter: C17
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
-        name: DELINQUENCYSTATUS
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C11
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: FIRSTTWICEPERMTHINVOICEDOM
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C12
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: SECONDTWICEPERMTHINVOICEDOM
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C13
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: PUBLICID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C14
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
+        name: UPDATETIME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -282,7 +263,7 @@ operation:
           columnCounter: C15
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(20)
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -301,29 +282,10 @@ operation:
           columnCounter: C16
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(1,0)
         defaultValue: ""
         description: ""
         name: RETIRED
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C17
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a1
-        config: {}
-        dataType: DATETIME
-        defaultValue: ""
-        description: ""
-        name: UPDATETIME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -336,5 +298,4 @@ operation:
   sqlType: Source
   type: sourceInput
   version: 1
-
 type: Node

@@ -4,7 +4,7 @@ name: BC_ADDRESS
 operation:
   database: ""
   deployEnabled: true
-  description: "Source table BC_ADDRESS from GuideWire"
+  description: Source table BC_ADDRESS from GuideWire
   locationName: SRC
   metadata:
     columns:
@@ -16,7 +16,7 @@ operation:
           columnCounter: C1
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: ID
@@ -35,7 +35,7 @@ operation:
           columnCounter: C2
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE1
@@ -54,7 +54,7 @@ operation:
           columnCounter: C3
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE2
@@ -73,7 +73,7 @@ operation:
           columnCounter: C4
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ADDRESSLINE3
@@ -92,7 +92,7 @@ operation:
           columnCounter: C5
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: CITY
@@ -108,29 +108,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C6
-          stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: POSTALCODE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
           columnCounter: C7
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: INTEGER
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
         name: STATE
@@ -146,13 +127,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C8
+          columnCounter: C6
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: BEANVERSION
+        name: POSTALCODE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -168,7 +149,7 @@ operation:
           columnCounter: C9
           stepCounter: bc9a1f23-4567-89ab-cdef-0123456789a7
         config: {}
-        dataType: DATETIME
+        dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
         description: ""
         name: UPDATETIME
@@ -184,5 +165,4 @@ operation:
   sqlType: Source
   type: sourceInput
   version: 1
-
 type: Node
