@@ -406,7 +406,7 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: "@[User::BatchID]"
+            transform: "CURRENT_TIMESTAMP()"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: SC29
