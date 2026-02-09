@@ -1,5 +1,5 @@
 fileVersion: 1
-id: STG_DIM_BA_001
+id: S2
 name: STG_DIMBILLINGACCOUNT
 operation:
   config:
@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: "Stage node with transformations for DimBillingAccount"
+  description: "Staging layer for DimBillingAccount with derived columns"
   isMultisource: false
   locationName: SRC
   materializationType: table
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC1
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C1
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(20)
         description: ""
@@ -29,12 +29,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C1
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC2
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C2
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(255)
         description: ""
@@ -43,12 +43,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C2
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC3
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C3
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(255)
         description: ""
@@ -57,12 +57,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C3
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC4
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C4
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -71,12 +71,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C4
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC5
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C5
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -85,12 +85,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C5
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC6
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C6
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -99,12 +99,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C6
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC7
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C7
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -113,12 +113,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C7
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC8
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C8
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -127,12 +127,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C8
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC9
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C9
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -141,12 +141,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C9
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC10
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C10
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(45)
         description: ""
@@ -155,12 +155,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C10
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC11
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C11
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(45)
         description: ""
@@ -169,12 +169,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C11
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC12
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C12
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -183,12 +183,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C12
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC13
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C13
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -197,12 +197,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C13
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC14
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C14
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(60)
         description: ""
@@ -211,12 +211,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C14
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC15
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C15
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -225,12 +225,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C15
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC16
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C16
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -239,12 +239,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C16
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC17
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C17
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -253,40 +253,40 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C17
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC18
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C18
+          stepCounter: S2
         config: {}
-        dataType: TIMESTAMP_NTZ
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
         name: ACCOUNTCLOSEDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C18
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC19
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C19
+          stepCounter: S2
         config: {}
-        dataType: TIMESTAMP_NTZ
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
         name: ACCOUNTCREATIONDATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C19
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC20
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C20
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -295,12 +295,12 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: C20
-                stepCounter: SRC_GW_BA_001
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC21
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C21
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -308,13 +308,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C23
-                stepCounter: SRC_GW_BA_001
+              - columnCounter: C21
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC22
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C22
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(20)
         description: ""
@@ -322,13 +322,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C24
-                stepCounter: SRC_GW_BA_001
+              - columnCounter: C22
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC23
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C23
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -336,48 +336,48 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C25
-                stepCounter: SRC_GW_BA_001
+              - columnCounter: C23
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC24
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C24
+          stepCounter: S2
         config: {}
         dataType: VARCHAR(2)
-        description: "Derived column - hardcoded to 'WC'"
+        description: ""
         name: LEGACYSOURCESYSTEM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: C26
-                stepCounter: SRC_GW_BA_001
+              - columnCounter: C24
+                stepCounter: S1
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: SC25
-          stepCounter: STG_DIM_BA_001
+          columnCounter: C25
+          stepCounter: S2
         config: {}
         dataType: NUMBER(38,0)
-        description: "Derived column - BatchID from variable"
+        description: "Derived column from SSIS package variable"
         name: BATCHID
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
-            transform: "CURRENT_BATCH_ID()"
+            transform: "${BatchID}"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          GUIDEWIRE_BILLING_ACCOUNT: SRC_GW_BA_001
+          BC_ACCOUNT: S1
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
-            nodeName: GUIDEWIRE_BILLING_ACCOUNT
+            nodeName: BC_ACCOUNT
         join:
           joinCondition: |
-            FROM {{ ref('SRC', 'GUIDEWIRE_BILLING_ACCOUNT') }} GUIDEWIRE_BILLING_ACCOUNT
+            FROM {{ ref('SRC', 'BC_ACCOUNT') }} BC_ACCOUNT
         name: STG_DIMBILLINGACCOUNT
         noLinkRefs: []
   name: STG_DIMBILLINGACCOUNT
