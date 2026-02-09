@@ -159,34 +159,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: TC11
-          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: FIRSTTWICEPERMTHINVOICEDOM
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC11
-                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: TC12
-          stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: SECONDTWICEPERMTHINVOICEDOM
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: SC12
-                stepCounter: stg9a1f23-4567-89ab-cdef-0123456789b1
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: TC13
           stepCounter: tgt9a1f23-4567-89ab-cdef-0123456789c1
         config: {}
