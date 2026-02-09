@@ -1,0 +1,55 @@
+fileVersion: 1
+id: S5
+name: BCTL_ACCOUNTROLE
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BCTL_ACCOUNTROLE from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S5
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S5
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: TYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTROLE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
