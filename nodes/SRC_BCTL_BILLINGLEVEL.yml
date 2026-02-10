@@ -1,0 +1,16 @@
+fileVersion: 1
+id: src_bctl_billinglevel_node
+name: SRC_BCTL_BILLINGLEVEL
+description: Source node for BCTL_BILLINGLEVEL table
+type: source
+config:
+  database: PC_COALESCE_DB
+  schema: RAW
+  table: BCTL_BILLINGLEVEL
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: NAME
+    dataType: VARCHAR(100)
+    nullable: true
