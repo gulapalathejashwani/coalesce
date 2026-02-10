@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S3
+id: SRC_BC_ACCOUNTCONTACT_003
 name: BC_ACCOUNTCONTACT
 operation:
-  database: PC_COALESCE_DB
+  database: "PC_COALESCE_DB"
   deployEnabled: true
-  description: Source table BC_ACCOUNTCONTACT
+  description: "Source node for BC_ACCOUNTCONTACT table"
   locationName: SRC
   metadata:
     columns:
@@ -14,7 +14,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: S3
+          stepCounter: SRC_BC_ACCOUNTCONTACT_003
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -33,7 +33,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: S3
+          stepCounter: SRC_BC_ACCOUNTCONTACT_003
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -52,7 +52,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: S3
+          stepCounter: SRC_BC_ACCOUNTCONTACT_003
         config: {}
         dataType: VARCHAR(20)
         defaultValue: ""
@@ -71,7 +71,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: S3
+          stepCounter: SRC_BC_ACCOUNTCONTACT_003
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -90,7 +90,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: S3
+          stepCounter: SRC_BC_ACCOUNTCONTACT_003
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -104,7 +104,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_ACCOUNTCONTACT
-  schema: RAW
+  schema: "RAW"
   sqlType: Source
   type: sourceInput
   version: 1
