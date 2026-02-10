@@ -1,0 +1,55 @@
+fileVersion: 1
+id: 5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e
+name: DIMBILLINGACCOUNT
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table DIMBILLINGACCOUNT from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: 5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: PUBLICID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: 5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DIMBILLINGACCOUNT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
