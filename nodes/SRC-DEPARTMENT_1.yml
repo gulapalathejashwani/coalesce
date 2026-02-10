@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 89da411a-5f20-4679-997b-655500ebef1a
-name: DEPARTMENT
+name: DEPARTMENT_1
 operation:
   database: ""
   deployEnabled: true
@@ -65,7 +65,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: DEPARTMENT
+  name: DEPARTMENT_1
   schema: ""
   sqlType: Source
   type: sourceInput
