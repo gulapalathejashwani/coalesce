@@ -1,112 +1,24 @@
 fileVersion: 1
-id: SRC_BC_ACCOUNTCONTACTROLE_004
-name: BC_ACCOUNTCONTACTROLE
-operation:
-  database: "PC_COALESCE_DB"
-  deployEnabled: true
-  description: "Source node for BC_ACCOUNTCONTACTROLE table"
-  locationName: SRC
-  metadata:
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C1
-          stepCounter: SRC_BC_ACCOUNTCONTACTROLE_004
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTCONTACTID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: SRC_BC_ACCOUNTCONTACTROLE_004
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ROLE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: SRC_BC_ACCOUNTCONTACTROLE_004
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: SRC_BC_ACCOUNTCONTACTROLE_004
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: UPDATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C5
-          stepCounter: SRC_BC_ACCOUNTCONTACTROLE_004
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: BC_ACCOUNTCONTACTROLE
-  schema: "RAW"
-  sqlType: Source
-  type: sourceInput
-  version: 1
-
-type: Node
+id: SRC_BC_ACCOUNTCONTACTROLE
+name: SRC_BC_ACCOUNTCONTACTROLE
+type: source
+config:
+  database: PC_COALESCE_DB
+  schema: RAW
+  table: BC_ACCOUNTCONTACTROLE
+columns:
+  - name: ACCOUNTCONTACTID
+    dataType: INTEGER
+    nullable: true
+  - name: ROLE
+    dataType: INTEGER
+    nullable: true
+  - name: BEANVERSION
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: UPDATETIME
+    dataType: TIMESTAMP
+    nullable: true
+  - name: ID
+    dataType: INTEGER
+    nullable: true
