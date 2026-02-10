@@ -1,0 +1,111 @@
+fileVersion: 1
+id: SRC_BC_ADDRESS
+name: SRC_BC_ADDRESS
+operation:
+  config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BC_ADDRESS
+  isMultisource: false
+  locationName: RAW
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - columnReference:
+          columnCounter: 1
+          stepCounter: 1
+        config: {}
+        dataType: INTEGER
+        name: ID
+        nullable: true
+      - columnReference:
+          columnCounter: 2
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(60)
+        name: ADDRESSLINE1
+        nullable: true
+      - columnReference:
+          columnCounter: 3
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(60)
+        name: ADDRESSLINE2
+        nullable: true
+      - columnReference:
+          columnCounter: 4
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(60)
+        name: ADDRESSLINE3
+        nullable: true
+      - columnReference:
+          columnCounter: 5
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(50)
+        name: CITY
+        nullable: true
+      - columnReference:
+          columnCounter: 6
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(50)
+        name: POSTALCODE
+        nullable: true
+      - columnReference:
+          columnCounter: 7
+          stepCounter: 1
+        config: {}
+        dataType: INTEGER
+        name: STATE
+        nullable: true
+      - columnReference:
+          columnCounter: 8
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(20)
+        name: BEANVERSION
+        nullable: true
+      - columnReference:
+          columnCounter: 9
+          stepCounter: 1
+        config: {}
+        dataType: TIMESTAMP
+        name: UPDATETIME
+        nullable: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BC_ADDRESS: SRC_BC_ADDRESS
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW
+            nodeName: BC_ADDRESS
+        join:
+          joinCondition: FROM {{ ref('RAW', 'BC_ADDRESS') }} BC_ADDRESS
+        name: SRC_BC_ADDRESS
+        noLinkRefs: []
+  name: SRC_BC_ADDRESS
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sql
+  version: 1
