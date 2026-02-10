@@ -1,21 +1,93 @@
 fileVersion: 1
-id: SRC_BC_PARENTACCT
-name: SRC_BC_PARENTACCT
-type: source
-config:
+id: S2
+name: BC_PARENTACCT
+operation:
   database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BC_PARENTACCT from GuideWire
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S2
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: OWNERID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S2
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: FOREIGNENTITYID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S2
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: S2
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: UPDATETIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BC_PARENTACCT
   schema: RAW
-  table: BC_PARENTACCT
-columns:
-  - name: OWNERID
-    dataType: INTEGER
-    nullable: true
-  - name: FOREIGNENTITYID
-    dataType: INTEGER
-    nullable: true
-  - name: BEANVERSION
-    dataType: VARCHAR(20)
-    nullable: true
-  - name: UPDATETIME
-    dataType: TIMESTAMP
-    nullable: true
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
