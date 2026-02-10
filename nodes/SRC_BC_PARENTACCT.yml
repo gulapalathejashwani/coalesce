@@ -2,9 +2,9 @@ fileVersion: 1
 id: S2
 name: BC_PARENTACCT
 operation:
-  database: PC_COALESCE_DB
+  database: ""
   deployEnabled: true
-  description: Source table BC_PARENTACCT from GuideWire
+  description: "Source table BC_PARENTACCT from GuideWire staging"
   locationName: SRC
   metadata:
     columns:
@@ -85,7 +85,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_PARENTACCT
-  schema: RAW
+  schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
