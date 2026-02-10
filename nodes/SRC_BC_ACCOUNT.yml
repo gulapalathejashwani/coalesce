@@ -2,9 +2,9 @@ fileVersion: 1
 id: S1
 name: BC_ACCOUNT
 operation:
-  database: PC_COALESCE_DB
+  database: ""
   deployEnabled: true
-  description: Source table BC_ACCOUNT
+  description: "Source table BC_ACCOUNT from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -332,7 +332,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_ACCOUNT
-  schema: RAW
+  schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
