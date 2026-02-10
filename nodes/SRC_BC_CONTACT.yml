@@ -1,96 +1,28 @@
 fileVersion: 1
-id: SRC_BC_CONTACT
+id: src_bc_contact_node
 name: SRC_BC_CONTACT
-operation:
-  config:
-    clusterKey: false
-    downstreamOption: true
-    groupByAll: false
-    initialize: ON_CREATE
-    insertStrategy: INSERT
-    orderby: false
-    postSQL: ""
-    preSQL: ""
-    refresh_mode: AUTO
-    secureoption: false
-    selectDistinct: false
-    testsEnabled: false
-    truncateBefore: false
-    warehouseName: PC_COALESCE_WH
+description: Source node for BC_CONTACT table
+type: source
+config:
   database: PC_COALESCE_DB
-  deployEnabled: true
-  description: Source table BC_CONTACT
-  isMultisource: false
-  locationName: RAW
-  materializationType: view
-  metadata:
-    appliedNodeTests: []
-    columns:
-      - columnReference:
-          columnCounter: 1
-          stepCounter: 1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: ID
-        nullable: true
-      - columnReference:
-          columnCounter: 2
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(45)
-        description: ""
-        name: FIRSTNAME
-        nullable: true
-      - columnReference:
-          columnCounter: 3
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(45)
-        description: ""
-        name: LASTNAME
-        nullable: true
-      - columnReference:
-          columnCounter: 4
-          stepCounter: 1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: PRIMARYADDRESSID
-        nullable: true
-      - columnReference:
-          columnCounter: 5
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: BEANVERSION
-        nullable: true
-      - columnReference:
-          columnCounter: 6
-          stepCounter: 1
-        config: {}
-        dataType: TIMESTAMP
-        description: ""
-        name: UPDATETIME
-        nullable: true
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases:
-          BC_CONTACT: SRC_BC_CONTACT
-        customSQL:
-          customSQL: ""
-        dependencies:
-          - locationName: RAW
-            nodeName: BC_CONTACT
-        join:
-          joinCondition: FROM {{ ref('RAW', 'BC_CONTACT') }} BC_CONTACT
-        name: SRC_BC_CONTACT
-        noLinkRefs: []
-  name: SRC_BC_CONTACT
-  overrideSQL: false
-  schema: ""
-  sqlType: Source
-  type: sql
-  version: 1
+  schema: RAW
+  table: BC_CONTACT
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: FIRSTNAME
+    dataType: VARCHAR(45)
+    nullable: true
+  - name: LASTNAME
+    dataType: VARCHAR(45)
+    nullable: true
+  - name: PRIMARYADDRESSID
+    dataType: INTEGER
+    nullable: true
+  - name: BEANVERSION
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: UPDATETIME
+    dataType: TIMESTAMP
+    nullable: true
