@@ -1,99 +1,19 @@
 fileVersion: 1
-id: SRC_BCTL_ACCOUNTROLE
+id: src_bctl_accountrole_node
 name: SRC_BCTL_ACCOUNTROLE
-operation:
-  config:
-    clusterKey: false
-    downstreamOption: true
-    groupByAll: false
-    initialize: ON_CREATE
-    insertStrategy: INSERT
-    orderby: false
-    postSQL: ""
-    preSQL: ""
-    refresh_mode: AUTO
-    secureoption: false
-    selectDistinct: false
-    testsEnabled: false
-    truncateBefore: false
-    warehouseName: PC_COALESCE_WH
+description: Source node for BCTL_ACCOUNTROLE table
+type: source
+config:
   database: PC_COALESCE_DB
-  deployEnabled: true
-  description: Source table BCTL_ACCOUNTROLE
-  isMultisource: false
-  locationName: RAW
-  materializationType: view
-  metadata:
-    appliedNodeTests: []
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1
-          stepCounter: 1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: TYPECODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(100)
-        description: ""
-        name: NAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3
-                stepCounter: 1
-            transform: ""
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases:
-          BCTL_ACCOUNTROLE: SRC_BCTL_ACCOUNTROLE
-        customSQL:
-          customSQL: ""
-        dependencies:
-          - locationName: RAW
-            nodeName: BCTL_ACCOUNTROLE
-        join:
-          joinCondition: FROM {{ ref('RAW', 'BCTL_ACCOUNTROLE') }} BCTL_ACCOUNTROLE
-        name: SRC_BCTL_ACCOUNTROLE
-        noLinkRefs: []
-  name: SRC_BCTL_ACCOUNTROLE
-  overrideSQL: false
-  schema: ""
-  sqlType: Source
-  type: sql
-  version: 1
+  schema: RAW
+  table: BCTL_ACCOUNTROLE
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: TYPECODE
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: NAME
+    dataType: VARCHAR(100)
+    nullable: true
