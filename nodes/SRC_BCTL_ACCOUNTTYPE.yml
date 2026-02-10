@@ -1,5 +1,5 @@
 fileVersion: 1
-id: src_bctl_accounttype_node
+id: src_bctl_accounttype_009
 name: SRC_BCTL_ACCOUNTTYPE
 description: Source node for BCTL_ACCOUNTTYPE table
 type: source
