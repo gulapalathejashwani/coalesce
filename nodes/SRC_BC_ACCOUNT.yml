@@ -1,340 +1,60 @@
 fileVersion: 1
-id: SRC_BC_ACCOUNT_001
-name: BC_ACCOUNT
-operation:
-  database: "PC_COALESCE_DB"
-  deployEnabled: true
-  description: "Source node for BC_ACCOUNT table"
-  locationName: SRC
-  metadata:
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C1
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: VARCHAR(255)
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTNUMBER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: VARCHAR(255)
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTTYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C5
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: BILLINGLEVEL
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C6
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: SERVICETIER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C7
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: SECURITYZONEID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C8
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: SEGMENT
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C9
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: CLOSEDATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C10
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: CREATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C11
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: DELINQUENCYSTATUS
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C12
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: FIRSTTWICEPERMTHINVOICEDOM
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C13
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: SECONDTWICEPERMTHINVOICEDOM
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C14
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: PUBLICID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C15
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C16
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: RETIRED
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C17
-          stepCounter: SRC_BC_ACCOUNT_001
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: UPDATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: BC_ACCOUNT
-  schema: "RAW"
-  sqlType: Source
-  type: sourceInput
-  version: 1
-
-type: Node
+id: SRC_BC_ACCOUNT
+name: SRC_BC_ACCOUNT
+type: source
+config:
+  database: PC_COALESCE_DB
+  schema: RAW
+  table: BC_ACCOUNT
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: ACCOUNTNUMBER
+    dataType: VARCHAR(255)
+    nullable: true
+  - name: ACCOUNTNAME
+    dataType: VARCHAR(255)
+    nullable: true
+  - name: ACCOUNTTYPE
+    dataType: INTEGER
+    nullable: true
+  - name: BILLINGLEVEL
+    dataType: INTEGER
+    nullable: true
+  - name: SERVICETIER
+    dataType: INTEGER
+    nullable: true
+  - name: SECURITYZONEID
+    dataType: INTEGER
+    nullable: true
+  - name: SEGMENT
+    dataType: INTEGER
+    nullable: true
+  - name: CLOSEDATE
+    dataType: TIMESTAMP
+    nullable: true
+  - name: CREATETIME
+    dataType: TIMESTAMP
+    nullable: true
+  - name: DELINQUENCYSTATUS
+    dataType: INTEGER
+    nullable: true
+  - name: FIRSTTWICEPERMTHINVOICEDOM
+    dataType: INTEGER
+    nullable: true
+  - name: SECONDTWICEPERMTHINVOICEDOM
+    dataType: INTEGER
+    nullable: true
+  - name: PUBLICID
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: BEANVERSION
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: RETIRED
+    dataType: INTEGER
+    nullable: true
+  - name: UPDATETIME
+    dataType: TIMESTAMP
+    nullable: true
