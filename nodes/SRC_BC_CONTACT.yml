@@ -1,131 +1,27 @@
 fileVersion: 1
-id: SRC_BC_CONTACT_006
-name: BC_CONTACT
-operation:
-  database: "PC_COALESCE_DB"
-  deployEnabled: true
-  description: "Source node for BC_CONTACT table"
-  locationName: SRC
-  metadata:
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C1
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: VARCHAR(45)
-        defaultValue: ""
-        description: ""
-        name: FIRSTNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: VARCHAR(45)
-        defaultValue: ""
-        description: ""
-        name: LASTNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: PRIMARYADDRESSID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C5
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C6
-          stepCounter: SRC_BC_CONTACT_006
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: UPDATETIME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: BC_CONTACT
-  schema: "RAW"
-  sqlType: Source
-  type: sourceInput
-  version: 1
-
-type: Node
+id: SRC_BC_CONTACT
+name: SRC_BC_CONTACT
+type: source
+config:
+  database: PC_COALESCE_DB
+  schema: RAW
+  table: BC_CONTACT
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: FIRSTNAME
+    dataType: VARCHAR(45)
+    nullable: true
+  - name: LASTNAME
+    dataType: VARCHAR(45)
+    nullable: true
+  - name: PRIMARYADDRESSID
+    dataType: INTEGER
+    nullable: true
+  - name: BEANVERSION
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: UPDATETIME
+    dataType: TIMESTAMP
+    nullable: true
