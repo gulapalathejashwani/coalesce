@@ -1,15 +1,55 @@
 fileVersion: 1
-id: SRC_BCTL_STATE
-name: SRC_BCTL_STATE
-type: source
-config:
+id: S8
+name: BCTL_STATE
+operation:
   database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BCTL_STATE from GuideWire
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S8
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S8
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_STATE
   schema: RAW
-  table: BCTL_STATE
-columns:
-  - name: ID
-    dataType: INTEGER
-    nullable: true
-  - name: NAME
-    dataType: VARCHAR(50)
-    nullable: true
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
