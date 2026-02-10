@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S6
+id: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
 name: BC_CONTACT
 operation:
-  database: PC_COALESCE_DB
+  database: ""
   deployEnabled: true
-  description: Source table BC_CONTACT from GuideWire
+  description: "Source table BC_CONTACT from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -14,7 +14,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -33,9 +33,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
-        dataType: VARCHAR(45)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: FIRSTNAME
@@ -52,9 +52,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
-        dataType: VARCHAR(45)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: LASTNAME
@@ -71,7 +71,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -90,9 +90,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
-        dataType: VARCHAR(20)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -109,9 +109,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: S6
+          stepCounter: 6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b
         config: {}
-        dataType: TIMESTAMP
+        dataType: DATETIME
         defaultValue: ""
         description: ""
         name: UPDATETIME
@@ -123,7 +123,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_CONTACT
-  schema: RAW
+  schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
