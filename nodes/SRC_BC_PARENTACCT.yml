@@ -1,116 +1,22 @@
 fileVersion: 1
-id: SRC_BC_PARENTACCT
+id: src_bc_parentacct_node
 name: SRC_BC_PARENTACCT
-operation:
-  config:
-    clusterKey: false
-    downstreamOption: true
-    groupByAll: false
-    initialize: ON_CREATE
-    insertStrategy: INSERT
-    orderby: false
-    postSQL: ""
-    preSQL: ""
-    refresh_mode: AUTO
-    secureoption: false
-    selectDistinct: false
-    testsEnabled: false
-    truncateBefore: false
-    warehouseName: PC_COALESCE_WH
+description: Source node for BC_PARENTACCT table
+type: source
+config:
   database: PC_COALESCE_DB
-  deployEnabled: true
-  description: Source table BC_PARENTACCT
-  isMultisource: false
-  locationName: RAW
-  materializationType: view
-  metadata:
-    appliedNodeTests: []
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1
-          stepCounter: 1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: OWNERID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2
-          stepCounter: 1
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: FOREIGNENTITYID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: BEANVERSION
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4
-          stepCounter: 1
-        config: {}
-        dataType: TIMESTAMP
-        description: ""
-        name: UPDATETIME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 4
-                stepCounter: 1
-            transform: ""
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases:
-          BC_PARENTACCT: SRC_BC_PARENTACCT
-        customSQL:
-          customSQL: ""
-        dependencies:
-          - locationName: RAW
-            nodeName: BC_PARENTACCT
-        join:
-          joinCondition: FROM {{ ref('RAW', 'BC_PARENTACCT') }} BC_PARENTACCT
-        name: SRC_BC_PARENTACCT
-        noLinkRefs: []
-  name: SRC_BC_PARENTACCT
-  overrideSQL: false
-  schema: ""
-  sqlType: Source
-  type: sql
-  version: 1
+  schema: RAW
+  table: BC_PARENTACCT
+columns:
+  - name: OWNERID
+    dataType: INTEGER
+    nullable: true
+  - name: FOREIGNENTITYID
+    dataType: INTEGER
+    nullable: true
+  - name: BEANVERSION
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: UPDATETIME
+    dataType: TIMESTAMP
+    nullable: true
