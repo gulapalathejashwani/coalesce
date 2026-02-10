@@ -1,19 +1,74 @@
 fileVersion: 1
-id: src_bctl_accountrole_005
-name: SRC_BCTL_ACCOUNTROLE
-description: Source node for BCTL_ACCOUNTROLE table
-type: source
-config:
+id: S5
+name: BCTL_ACCOUNTROLE
+operation:
   database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BCTL_ACCOUNTROLE
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S5
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S5
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: TYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S5
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTROLE
   schema: RAW
-  table: BCTL_ACCOUNTROLE
-columns:
-  - name: ID
-    dataType: INTEGER
-    nullable: true
-  - name: TYPECODE
-    dataType: VARCHAR(20)
-    nullable: true
-  - name: NAME
-    dataType: VARCHAR(100)
-    nullable: true
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
