@@ -1,7 +1,6 @@
 fileVersion: 1
-id: src_bctl_accounttype_009
+id: SRC_BCTL_ACCOUNTTYPE
 name: SRC_BCTL_ACCOUNTTYPE
-description: Source node for BCTL_ACCOUNTTYPE table
 type: source
 config:
   database: PC_COALESCE_DB
