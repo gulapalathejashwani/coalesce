@@ -1,5 +1,5 @@
 fileVersion: 1
-id: src_bc_contact_node
+id: src_bc_contact_006
 name: SRC_BC_CONTACT
 description: Source node for BC_CONTACT table
 type: source
