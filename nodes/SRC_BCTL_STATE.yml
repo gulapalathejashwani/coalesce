@@ -1,0 +1,62 @@
+fileVersion: 1
+id: SRC_BCTL_STATE
+name: SRC_BCTL_STATE
+operation:
+  config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BCTL_STATE
+  isMultisource: false
+  locationName: RAW
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - columnReference:
+          columnCounter: 1
+          stepCounter: 1
+        config: {}
+        dataType: INTEGER
+        name: ID
+        nullable: true
+      - columnReference:
+          columnCounter: 2
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(50)
+        name: NAME
+        nullable: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BCTL_STATE: SRC_BCTL_STATE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW
+            nodeName: BCTL_STATE
+        join:
+          joinCondition: FROM {{ ref('RAW', 'BCTL_STATE') }} BCTL_STATE
+        name: SRC_BCTL_STATE
+        noLinkRefs: []
+  name: SRC_BCTL_STATE
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sql
+  version: 1
