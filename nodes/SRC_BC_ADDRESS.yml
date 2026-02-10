@@ -1,10 +1,10 @@
 fileVersion: 1
-id: S7
+id: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
 name: BC_ADDRESS
 operation:
-  database: PC_COALESCE_DB
+  database: ""
   deployEnabled: true
-  description: Source table BC_ADDRESS from GuideWire
+  description: "Source table BC_ADDRESS from GuideWire"
   locationName: SRC
   metadata:
     columns:
@@ -14,7 +14,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C1
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -33,9 +33,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C2
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(60)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: ADDRESSLINE1
@@ -52,9 +52,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C3
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(60)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: ADDRESSLINE2
@@ -71,9 +71,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C4
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(60)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: ADDRESSLINE3
@@ -90,9 +90,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C5
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(50)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: CITY
@@ -109,9 +109,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C6
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(50)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: POSTALCODE
@@ -128,7 +128,7 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C7
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
         dataType: INTEGER
         defaultValue: ""
@@ -147,9 +147,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C8
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: VARCHAR(20)
+        dataType: STRING
         defaultValue: ""
         description: ""
         name: BEANVERSION
@@ -166,9 +166,9 @@ operation:
         appliedColumnTests: {}
         columnReference:
           columnCounter: C9
-          stepCounter: S7
+          stepCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
         config: {}
-        dataType: TIMESTAMP
+        dataType: DATETIME
         defaultValue: ""
         description: ""
         name: UPDATETIME
@@ -180,7 +180,7 @@ operation:
         transform: ""
         uniqueKey: false
   name: BC_ADDRESS
-  schema: RAW
+  schema: ""
   sqlType: Source
   type: sourceInput
   version: 1
