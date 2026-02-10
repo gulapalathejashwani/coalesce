@@ -1,15 +1,55 @@
 fileVersion: 1
-id: SRC_BCTL_ACCOUNTTYPE
-name: SRC_BCTL_ACCOUNTTYPE
-type: source
-config:
-  database: PC_COALESCE_DB
-  schema: RAW
-  table: BCTL_ACCOUNTTYPE
-columns:
-  - name: ID
-    dataType: INTEGER
-    nullable: true
-  - name: NAME
-    dataType: VARCHAR(50)
-    nullable: true
+id: 9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e
+name: BCTL_ACCOUNTTYPE
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BCTL_ACCOUNTTYPE from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: 9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: 9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTTYPE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
