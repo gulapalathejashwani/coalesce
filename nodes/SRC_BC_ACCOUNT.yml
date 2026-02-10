@@ -1,5 +1,5 @@
 fileVersion: 1
-id: src_bc_account_node
+id: src_bc_account_001
 name: SRC_BC_ACCOUNT
 description: Source node for BC_ACCOUNT table
 type: source
