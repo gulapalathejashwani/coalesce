@@ -1,15 +1,55 @@
 fileVersion: 1
-id: SRC_BCTL_BILLINGLEVEL
-name: SRC_BCTL_BILLINGLEVEL
-type: source
-config:
-  database: PC_COALESCE_DB
-  schema: RAW
-  table: BCTL_BILLINGLEVEL
-columns:
-  - name: ID
-    dataType: INTEGER
-    nullable: true
-  - name: NAME
-    dataType: VARCHAR(100)
-    nullable: true
+id: 0c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f
+name: BCTL_BILLINGLEVEL
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BCTL_BILLINGLEVEL from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: 0c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: 0c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_BILLINGLEVEL
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
