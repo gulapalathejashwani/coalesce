@@ -1,74 +1,18 @@
 fileVersion: 1
-id: SRC_BCTL_ACCOUNTROLE_005
-name: BCTL_ACCOUNTROLE
-operation:
-  database: "PC_COALESCE_DB"
-  deployEnabled: true
-  description: "Source node for BCTL_ACCOUNTROLE table"
-  locationName: SRC
-  metadata:
-    columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C1
-          stepCounter: SRC_BCTL_ACCOUNTROLE_005
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: SRC_BCTL_ACCOUNTROLE_005
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: TYPECODE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: SRC_BCTL_ACCOUNTROLE_005
-        config: {}
-        dataType: VARCHAR(100)
-        defaultValue: ""
-        description: ""
-        name: NAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: BCTL_ACCOUNTROLE
-  schema: "RAW"
-  sqlType: Source
-  type: sourceInput
-  version: 1
-
-type: Node
+id: SRC_BCTL_ACCOUNTROLE
+name: SRC_BCTL_ACCOUNTROLE
+type: source
+config:
+  database: PC_COALESCE_DB
+  schema: RAW
+  table: BCTL_ACCOUNTROLE
+columns:
+  - name: ID
+    dataType: INTEGER
+    nullable: true
+  - name: TYPECODE
+    dataType: VARCHAR(20)
+    nullable: true
+  - name: NAME
+    dataType: VARCHAR(100)
+    nullable: true
