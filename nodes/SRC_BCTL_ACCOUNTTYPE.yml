@@ -1,0 +1,62 @@
+fileVersion: 1
+id: SRC_BCTL_ACCOUNTTYPE
+name: SRC_BCTL_ACCOUNTTYPE
+operation:
+  config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Source table BCTL_ACCOUNTTYPE
+  isMultisource: false
+  locationName: RAW
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - columnReference:
+          columnCounter: 1
+          stepCounter: 1
+        config: {}
+        dataType: INTEGER
+        name: ID
+        nullable: true
+      - columnReference:
+          columnCounter: 2
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR(50)
+        name: NAME
+        nullable: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BCTL_ACCOUNTTYPE: SRC_BCTL_ACCOUNTTYPE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW
+            nodeName: BCTL_ACCOUNTTYPE
+        join:
+          joinCondition: FROM {{ ref('RAW', 'BCTL_ACCOUNTTYPE') }} BCTL_ACCOUNTTYPE
+        name: SRC_BCTL_ACCOUNTTYPE
+        noLinkRefs: []
+  name: SRC_BCTL_ACCOUNTTYPE
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sql
+  version: 1
