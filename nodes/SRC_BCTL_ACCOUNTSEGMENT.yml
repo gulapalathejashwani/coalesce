@@ -1,0 +1,55 @@
+fileVersion: 1
+id: 4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d
+name: BCTL_ACCOUNTSEGMENT
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table BCTL_ACCOUNTSEGMENT from GuideWire"
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: 4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: 4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BCTL_ACCOUNTSEGMENT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
