@@ -1,7 +1,6 @@
 fileVersion: 1
-id: src_bctl_billinglevel_010
+id: SRC_BCTL_BILLINGLEVEL
 name: SRC_BCTL_BILLINGLEVEL
-description: Source node for BCTL_BILLINGLEVEL table
 type: source
 config:
   database: PC_COALESCE_DB
