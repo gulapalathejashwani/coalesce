@@ -1,0 +1,54 @@
+fileVersion: 1
+id: T5
+name: CNT_Unchange_Count
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Row Count transformation to count unchanged rows where BeanVersion matches - SSIS Variable: User::UnChangeCount"
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: T5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: "Count of unchanged rows"
+        name: UNCHANGE_COUNT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "COUNT(*)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CSPL_Check_BeanVersion: T4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CSPL_Check_BeanVersion
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'CSPL_Check_BeanVersion') }} "CSPL_Check_BeanVersion"
+            WHERE OUTPUT_PATH = 'SameBeanVersion'
+        name: CNT_Unchange_Count
+        noLinkRefs: []
+  name: CNT_Unchange_Count
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
