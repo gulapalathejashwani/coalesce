@@ -1,77 +1,87 @@
-fileVersion: 1
-id: S3
-name: BC_PARENTACCT
+fileVersion: 1.0
+name: SOURCE_BC_PARENTACCT
 operation:
-  database: ""
+  config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for parent account relationships"
+  description: Source table BC_PARENTACCT from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S3
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: VARCHAR
+        description: Parent Account ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S3
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: VARCHAR
+        description: Account ID
         name: ACCOUNTID
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: S3
+          columnCounter: 3
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: PARENTACCOUNTID
+        dataType: VARCHAR
+        description: Parent Account Reference
+        name: PARENTACCOUNT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BC_PARENTACCT
-  schema: ""
-  sqlType: Source
-  type: sourceInput
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BC_PARENTACCT
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BC_PARENTACCT') }}
+        name: SOURCE_BC_PARENTACCT
+        noLinkRefs: []
+  name: SOURCE_BC_PARENTACCT
+  overrideSQL: false
+  schema: RAW
+  sqlType: SOURCE
+  type: sql
   version: 1
-
-type: Node
