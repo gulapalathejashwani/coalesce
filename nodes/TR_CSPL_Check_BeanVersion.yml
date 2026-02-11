@@ -1,0 +1,68 @@
+fileVersion: 1
+id: T4
+name: CSPL_Check_BeanVersion
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Conditional Split to compare BeanVersion from source vs lookup - splits into SameBeanVersion and DifferentBeanVersion outputs"
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: T4
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: "All columns from lookup"
+        name: "*"
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: null
+                stepCounter: T3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: T4
+        config: {}
+        dataType: VARCHAR(50)
+        description: "Output path indicator"
+        name: OUTPUT_PATH
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CASE WHEN BEANVERSION = EDWBEANVERSION THEN 'SameBeanVersion' WHEN BEANVERSION <> EDWBEANVERSION THEN 'DifferentBeanVersion' ELSE 'NoMatch' END"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LKP_DimBillingAccount: T3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: LKP_DimBillingAccount
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'LKP_DimBillingAccount') }} "LKP_DimBillingAccount"
+            WHERE EDWBEANVERSION IS NOT NULL
+        name: CSPL_Check_BeanVersion
+        noLinkRefs: []
+  name: CSPL_Check_BeanVersion
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
