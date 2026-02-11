@@ -1,0 +1,195 @@
+fileVersion: 1
+id: J1
+name: JOIN_GuideWire_DimBillingAccount
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: "Joins all GuideWire source tables for DimBillingAccount data flow"
+  isMultisource: true
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - columnReference:
+          columnCounter: 1
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Account Public ID"
+        name: PublicID
+        nullable: false
+      - columnReference:
+          columnCounter: 2
+          stepCounter: J1
+        dataType: NUMBER
+        description: "Bean Version"
+        name: BeanVersion
+        nullable: true
+      - columnReference:
+          columnCounter: 3
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Account Number"
+        name: AccountNumber
+        nullable: true
+      - columnReference:
+          columnCounter: 4
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Account Type"
+        name: AccountType
+        nullable: true
+      - columnReference:
+          columnCounter: 5
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Parent Account Number"
+        name: ParentAccountNumber
+        nullable: true
+      - columnReference:
+          columnCounter: 6
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Billing Level"
+        name: BillingLevel
+        nullable: true
+      - columnReference:
+          columnCounter: 7
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Service Tier"
+        name: ServiceTier
+        nullable: true
+      - columnReference:
+          columnCounter: 8
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Security Zone"
+        name: SecurityZone
+        nullable: true
+      - columnReference:
+          columnCounter: 9
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Insured Name"
+        name: InsuredName
+        nullable: true
+      - columnReference:
+          columnCounter: 10
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Insured Address"
+        name: InsuredAddress
+        nullable: true
+      - columnReference:
+          columnCounter: 11
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Delinquency Status"
+        name: DelinquencyStatus
+        nullable: true
+      - columnReference:
+          columnCounter: 12
+          stepCounter: J1
+        dataType: VARCHAR
+        description: "Account Segment"
+        name: AccountSegment
+        nullable: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          bc_account: S1
+          bctl_accounttype: S2
+          bc_ParentAcct: S3
+          bc_account_parent: S4
+          bctl_billinglevel: S5
+          bctl_customerservicetier: S6
+          bc_securityzone: S7
+          bc_accountcontact: S8
+          bc_accountcontactrole: S9
+          bctl_accountrole: S10
+          bc_contact: S11
+          bc_address: S12
+          bctl_state: S13
+          bctl_delinquencystatus: S14
+          bctl_accountsegment: S15
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: bc_account
+          - locationName: SRC
+            nodeName: bctl_accounttype
+          - locationName: SRC
+            nodeName: bc_ParentAcct
+          - locationName: SRC
+            nodeName: bctl_billinglevel
+          - locationName: SRC
+            nodeName: bctl_customerservicetier
+          - locationName: SRC
+            nodeName: bc_securityzone
+          - locationName: SRC
+            nodeName: bc_accountcontact
+          - locationName: SRC
+            nodeName: bc_accountcontactrole
+          - locationName: SRC
+            nodeName: bctl_accountrole
+          - locationName: SRC
+            nodeName: bc_contact
+          - locationName: SRC
+            nodeName: bc_address
+          - locationName: SRC
+            nodeName: bctl_state
+          - locationName: SRC
+            nodeName: bctl_delinquencystatus
+          - locationName: SRC
+            nodeName: bctl_accountsegment
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'bc_account') }} bc_account
+            LEFT JOIN {{ ref('SRC', 'bctl_accounttype') }} bctl_accounttype
+              ON bctl_accounttype.ID = bc_account.AccountType
+            LEFT JOIN {{ ref('SRC', 'bc_ParentAcct') }} bc_ParentAcct
+              ON bc_ParentAcct.ID = bc_account.ID
+            LEFT JOIN {{ ref('SRC', 'bc_account') }} bc_account_parent
+              ON bc_account_parent.ID = bc_ParentAcct.ParentAccountID
+            LEFT JOIN {{ ref('SRC', 'bctl_billinglevel') }} bctl_billinglevel
+              ON bctl_billinglevel.ID = bc_account.BillingLevel
+            LEFT JOIN {{ ref('SRC', 'bctl_customerservicetier') }} bctl_customerservicetier
+              ON bctl_customerservicetier.ID = bc_account.ServiceTier
+            LEFT JOIN {{ ref('SRC', 'bc_securityzone') }} bc_securityzone
+              ON bc_securityzone.ID = bc_account.SecurityZoneID
+            LEFT JOIN (
+              SELECT 
+                acr.AccountID,
+                c.DisplayName as InsuredName,
+                a.AddressLine1 as InsuredAddress,
+                s.Name as State
+              FROM {{ ref('SRC', 'bc_accountcontact') }} ac
+              JOIN {{ ref('SRC', 'bc_accountcontactrole') }} acr ON ac.ID = acr.AccountContactID
+              JOIN {{ ref('SRC', 'bctl_accountrole') }} ar ON acr.AccountRole = ar.ID
+              LEFT JOIN {{ ref('SRC', 'bc_contact') }} c ON ac.ContactID = c.ID
+              LEFT JOIN {{ ref('SRC', 'bc_address') }} a ON c.PrimaryAddressID = a.ID
+              LEFT JOIN {{ ref('SRC', 'bctl_state') }} s ON a.State = s.ID
+              WHERE ar.Name = 'Insured'
+            ) InsuredInfo ON InsuredInfo.AccountID = bc_account.ID
+            LEFT JOIN {{ ref('SRC', 'bctl_delinquencystatus') }} bctl_delinquencystatus
+              ON bctl_delinquencystatus.ID = bc_account.DelinquencyStatus
+            LEFT JOIN {{ ref('SRC', 'bctl_accountsegment') }} bctl_accountsegment
+              ON bctl_accountsegment.ID = bc_account.Segment
+        name: JOIN_GuideWire_DimBillingAccount
+        noLinkRefs: []
+  name: JOIN_GuideWire_DimBillingAccount
+  overrideSQL: false
+  schema: RAW
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
