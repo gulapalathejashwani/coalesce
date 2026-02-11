@@ -1,0 +1,74 @@
+fileVersion: 1
+id: T3
+name: LKP_DimBillingAccount
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Lookup transformation to retrieve BeanVersion from DimBillingAccount based on PublicID"
+  isMultisource: true
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: T3
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: "All columns from source"
+        name: "*"
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: null
+                stepCounter: T2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: T3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: "BeanVersion from DimBillingAccount lookup"
+        name: EDWBEANVERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: null
+                stepCounter: L1
+            transform: "BEANVERSION"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DRV_BatchID_Legacy: T2
+          DimBillingAccount: L1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DRV_BatchID_Legacy
+          - locationName: SRC
+            nodeName: DimBillingAccount
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'DRV_BatchID_Legacy') }} "DRV_BatchID_Legacy"
+            LEFT JOIN {{ ref('SRC', 'DimBillingAccount') }} "DimBillingAccount"
+            ON "DRV_BatchID_Legacy".PUBLICID = "DimBillingAccount".PUBLICID
+        name: LKP_DimBillingAccount
+        noLinkRefs: []
+  name: LKP_DimBillingAccount
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
