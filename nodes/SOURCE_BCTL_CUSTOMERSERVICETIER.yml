@@ -1,97 +1,69 @@
 fileVersion: 1
-id: S5
-name: BCTL_CUSTOMERSERVICETIER
+id: SOURCE_BCTL_CUSTOMERSERVICETIER
+name: SOURCE_BCTL_CUSTOMERSERVICETIER
 operation:
-  database: ""
+  config:
+    insertStrategy: INSERT
+    selectDistinct: false
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for customer service tier lookup data"
+  description: Source table BCTL_CUSTOMERSERVICETIER from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S5
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: NUMBER(38,0)
+        description: Customer service tier ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S5
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: NAME
+        dataType: VARCHAR(50)
+        description: Customer service tier type code
+        name: TYPECODE
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: S5
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: DESCRIPTION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: S5
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: PRIORITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BCTL_CUSTOMERSERVICETIER
-  schema: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BCTL_CUSTOMERSERVICETIER
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BCTL_CUSTOMERSERVICETIER') }}
+        name: SOURCE_BCTL_CUSTOMERSERVICETIER
+        noLinkRefs: []
+  name: SOURCE_BCTL_CUSTOMERSERVICETIER
+  overrideSQL: false
+  schema: RAW
   sqlType: Source
-  type: sourceInput
+  type: sql
   version: 1
-
-type: Node
