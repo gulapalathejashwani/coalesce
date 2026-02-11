@@ -1,0 +1,74 @@
+fileVersion: 1
+id: J2
+name: JOIN_BC_ACCOUNT_PARENTACCT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Join bc_account with ParentAcct subquery"
+  isMultisource: true
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: J2
+        config: {}
+        dataType: VARCHAR
+        description: "Account ID"
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: J1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: J2
+        config: {}
+        dataType: VARCHAR
+        description: "Parent Account Number"
+        name: PARENT_ACCOUNT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: SRC_BC_PARENTACCT
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          bc_account: J1
+          ParentAcct: SRC_BC_PARENTACCT
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: JOIN_BC_ACCOUNT_ACCOUNTTYPE
+          - locationName: SRC
+            nodeName: SRC_BC_PARENTACCT
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'JOIN_BC_ACCOUNT_ACCOUNTTYPE') }} bc_account
+            LEFT JOIN {{ ref('SRC', 'SRC_BC_PARENTACCT') }} ParentAcct
+              ON ParentAcct.ID = bc_account.ParentAccountID
+        name: JOIN_BC_ACCOUNT_PARENTACCT
+        noLinkRefs: []
+  name: JOIN_BC_ACCOUNT_PARENTACCT
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
