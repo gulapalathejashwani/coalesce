@@ -1,10 +1,21 @@
-fileVersion: 1
-id: SOURCE_BCTL_DELINQUENCYSTATUS
+fileVersion: 1.0
 name: SOURCE_BCTL_DELINQUENCYSTATUS
 operation:
   config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
     selectDistinct: false
+    testsEnabled: true
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
   database: PC_COALESCE_DB
   deployEnabled: true
   description: Source table BCTL_DELINQUENCYSTATUS from GuideWire
@@ -14,16 +25,13 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 1
           stepCounter: 1
         config: {}
-        dataType: NUMBER(38,0)
-        description: Delinquency status ID
+        dataType: VARCHAR
+        description: Delinquency Status ID
         name: ID
         nullable: true
         sourceColumnReferences:
@@ -31,16 +39,13 @@ operation:
               - columnCounter: 1
                 stepCounter: 1
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 2
           stepCounter: 1
         config: {}
-        dataType: VARCHAR(50)
-        description: Delinquency status type code
+        dataType: VARCHAR
+        description: Type Code
         name: TYPECODE
         nullable: true
         sourceColumnReferences:
@@ -48,11 +53,24 @@ operation:
               - columnCounter: 2
                 stepCounter: 1
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR
+        description: Description
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
-        customSQL:
+      - customSQL:
           customSQL: ""
         dependencies:
           - locationName: SOURCE
@@ -64,6 +82,6 @@ operation:
   name: SOURCE_BCTL_DELINQUENCYSTATUS
   overrideSQL: false
   schema: RAW
-  sqlType: Source
+  sqlType: SOURCE
   type: sql
   version: 1
