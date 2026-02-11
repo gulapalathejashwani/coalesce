@@ -1,77 +1,86 @@
 fileVersion: 1
-id: S8
-name: BC_ACCOUNTCONTACTROLE
+id: SOURCE_BC_ACCOUNTCONTACTROLE
+name: SOURCE_BC_ACCOUNTCONTACTROLE
 operation:
-  database: ""
+  config:
+    insertStrategy: INSERT
+    selectDistinct: false
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for account contact role relationships"
+  description: Source table BC_ACCOUNTCONTACTROLE from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S8
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: NUMBER(38,0)
+        description: Account contact role ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S8
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTCONTACTID
+        dataType: NUMBER(38,0)
+        description: Account contact ID
+        name: ACCOUNTCONTACT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: S8
+          columnCounter: 3
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTROLEID
+        dataType: NUMBER(38,0)
+        description: Role ID
+        name: ROLE
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BC_ACCOUNTCONTACTROLE
-  schema: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BC_ACCOUNTCONTACTROLE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BC_ACCOUNTCONTACTROLE') }}
+        name: SOURCE_BC_ACCOUNTCONTACTROLE
+        noLinkRefs: []
+  name: SOURCE_BC_ACCOUNTCONTACTROLE
+  overrideSQL: false
+  schema: RAW
   sqlType: Source
-  type: sourceInput
+  type: sql
   version: 1
-
-type: Node
