@@ -1,0 +1,436 @@
+fileVersion: 1
+id: T1
+name: DIMBILLINGACCOUNT
+operation:
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: Target table for Billing Account dimension with SCD Type 1 logic
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Public ID from source system
+        name: PUBLICID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C1
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: T1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Bean version for SCD tracking
+        name: BEANVERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C2
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Account number
+        name: ACCOUNTNUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C3
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C4
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Account type
+        name: ACCOUNTTYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C4
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C5
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Parent account public ID
+        name: PARENTACCOUNTPUBLICID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C5
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C6
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Billing level
+        name: BILLINGLEVEL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C6
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C7
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Customer service tier
+        name: SERVICETIER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C7
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C8
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Security zone ID
+        name: SECURITYZONEID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C8
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C9
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured first name
+        name: INSUREDFIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C9
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C10
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured last name
+        name: INSUREDLASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C10
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C11
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured address line 1
+        name: INSUREDADDRESSLINE1
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C11
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C12
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured city
+        name: INSUREDCITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C12
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C13
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured state
+        name: INSUREDSTATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C13
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C14
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Insured postal code
+        name: INSUREDPOSTALCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C14
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C15
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Delinquency status
+        name: DELINQUENCYSTATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C15
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C16
+          stepCounter: T1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Account segment
+        name: SEGMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C16
+                stepCounter: J1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C17
+          stepCounter: T1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Batch ID from SSIS variable
+        name: BATCHID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C17
+                stepCounter: D1
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C18
+          stepCounter: T1
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: Record insert timestamp
+        name: INSERTDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C18
+                stepCounter: D1
+            transform: CURRENT_TIMESTAMP()
+        transform: CURRENT_TIMESTAMP()
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C19
+          stepCounter: T1
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: Record update timestamp
+        name: UPDATEDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: C19
+                stepCounter: D1
+            transform: CURRENT_TIMESTAMP()
+        transform: CURRENT_TIMESTAMP()
+        uniqueKey: false
+
+  name: DIMBILLINGACCOUNT
+  schema: RAW
+  sqlType: Target
+  type: table
+  version: 1
+
+type: Node
