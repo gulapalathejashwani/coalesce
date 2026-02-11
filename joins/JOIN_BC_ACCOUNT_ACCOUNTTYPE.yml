@@ -1,0 +1,74 @@
+fileVersion: 1
+id: J1
+name: JOIN_BC_ACCOUNT_ACCOUNTTYPE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Join bc_account with bctl_accounttype"
+  isMultisource: true
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: J1
+        config: {}
+        dataType: VARCHAR
+        description: "Account ID"
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: SRC_BC_ACCOUNT
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: J1
+        config: {}
+        dataType: VARCHAR
+        description: "Account Type"
+        name: ACCOUNTTYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: SRC_BCTL_ACCOUNTTYPE
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          bc_account: SRC_BC_ACCOUNT
+          bctl_accounttype: SRC_BCTL_ACCOUNTTYPE
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SRC_BC_ACCOUNT
+          - locationName: SRC
+            nodeName: SRC_BCTL_ACCOUNTTYPE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'SRC_BC_ACCOUNT') }} bc_account
+            LEFT JOIN {{ ref('SRC', 'SRC_BCTL_ACCOUNTTYPE') }} bctl_accounttype
+              ON bctl_accounttype.ID = bc_account.AccountType
+        name: JOIN_BC_ACCOUNT_ACCOUNTTYPE
+        noLinkRefs: []
+  name: JOIN_BC_ACCOUNT_ACCOUNTTYPE
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
