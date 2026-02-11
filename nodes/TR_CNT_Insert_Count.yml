@@ -1,0 +1,54 @@
+fileVersion: 1
+id: T7
+name: CNT_Insert_Count
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Row Count transformation to count new rows for insert (Lookup No Match) - SSIS Variable: User::InsertCount"
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: T7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: "Count of rows to insert"
+        name: INSERT_COUNT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "COUNT(*)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LKP_DimBillingAccount: T3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: LKP_DimBillingAccount
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'LKP_DimBillingAccount') }} "LKP_DimBillingAccount"
+            WHERE EDWBEANVERSION IS NULL
+        name: CNT_Insert_Count
+        noLinkRefs: []
+  name: CNT_Insert_Count
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
