@@ -1,0 +1,57 @@
+fileVersion: 1
+id: S3
+name: BC_PARENTACCT
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table for parent account information from GuideWire"
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S3
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: "Account ID"
+        name: ACCOUNTID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S3
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: "Parent account ID"
+        name: PARENTACCOUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+  name: BC_PARENTACCT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
