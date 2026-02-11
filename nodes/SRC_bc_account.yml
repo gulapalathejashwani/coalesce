@@ -1,0 +1,42 @@
+fileVersion: 1
+id: S1
+name: bc_account
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: bc_account
+  metadata:
+    columns:
+      - name: AccountNumber
+      - name: AccountName
+      - name: AccountTypeName
+      - name: ParentAccountNumber
+      - name: BillingLevelName
+      - name: Segment
+      - name: ServiceTierName
+      - name: SecurityZone
+      - name: FirstName
+      - name: LastName
+      - name: AddressLine1
+      - name: AddressLine2
+      - name: AddressLine3
+      - name: City
+      - name: State
+      - name: PostalCode
+      - name: AccountCloseDate
+      - name: AccountCreationDate
+      - name: DeliquencyStatusName
+      - name: FirstTwicePerMonthInvoiceDayOfMonth
+      - name: SecondTwicePerMonthInvoiceDayOfMonth
+      - name: PublicID
+      - name: GWRowNumber
+      - name: BeanVersion
+      - name: IsActive
+      - name: LegacySourceSystem
+  name: bc_account
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
