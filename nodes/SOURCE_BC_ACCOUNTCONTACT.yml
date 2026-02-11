@@ -1,97 +1,86 @@
 fileVersion: 1
-id: S7
-name: BC_ACCOUNTCONTACT
+id: SOURCE_BC_ACCOUNTCONTACT
+name: SOURCE_BC_ACCOUNTCONTACT
 operation:
-  database: ""
+  config:
+    insertStrategy: INSERT
+    selectDistinct: false
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for account contact relationships"
+  description: Source table BC_ACCOUNTCONTACT from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S7
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: NUMBER(38,0)
+        description: Account contact ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S7
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: ACCOUNTID
+        dataType: NUMBER(38,0)
+        description: Account ID
+        name: ACCOUNT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: S7
+          columnCounter: 3
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: CONTACTID
+        dataType: NUMBER(38,0)
+        description: Contact ID
+        name: CONTACT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: S7
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: RETIRED
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BC_ACCOUNTCONTACT
-  schema: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BC_ACCOUNTCONTACT
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BC_ACCOUNTCONTACT') }}
+        name: SOURCE_BC_ACCOUNTCONTACT
+        noLinkRefs: []
+  name: SOURCE_BC_ACCOUNTCONTACT
+  overrideSQL: false
+  schema: RAW
   sqlType: Source
-  type: sourceInput
+  type: sql
   version: 1
-
-type: Node
