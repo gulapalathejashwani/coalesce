@@ -1,97 +1,69 @@
 fileVersion: 1
-id: S13
-name: BCTL_DELINQUENCYSTATUS
+id: SOURCE_BCTL_DELINQUENCYSTATUS
+name: SOURCE_BCTL_DELINQUENCYSTATUS
 operation:
-  database: ""
+  config:
+    insertStrategy: INSERT
+    selectDistinct: false
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for delinquency status lookup data"
+  description: Source table BCTL_DELINQUENCYSTATUS from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S13
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: NUMBER(38,0)
+        description: Delinquency status ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S13
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: NAME
+        dataType: VARCHAR(50)
+        description: Delinquency status type code
+        name: TYPECODE
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C3
-          stepCounter: S13
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: DESCRIPTION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: S13
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: PRIORITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BCTL_DELINQUENCYSTATUS
-  schema: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BCTL_DELINQUENCYSTATUS
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BCTL_DELINQUENCYSTATUS') }}
+        name: SOURCE_BCTL_DELINQUENCYSTATUS
+        noLinkRefs: []
+  name: SOURCE_BCTL_DELINQUENCYSTATUS
+  overrideSQL: false
+  schema: RAW
   sqlType: Source
-  type: sourceInput
+  type: sql
   version: 1
-
-type: Node
