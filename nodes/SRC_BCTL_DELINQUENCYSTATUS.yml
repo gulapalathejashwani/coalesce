@@ -1,0 +1,77 @@
+fileVersion: 1
+id: S13
+name: BCTL_DELINQUENCYSTATUS
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source table for delinquency status lookup from GuideWire"
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C1
+          stepCounter: S13
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: "Delinquency status ID"
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C2
+          stepCounter: S13
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: "Delinquency status name"
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: C3
+          stepCounter: S13
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: "Delinquency status description"
+        name: DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+
+  name: BCTL_DELINQUENCYSTATUS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+
+type: Node
