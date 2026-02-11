@@ -1,0 +1,74 @@
+fileVersion: 1
+id: J4
+name: JOIN_BC_ACCOUNT_SERVICETIER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Join with bctl_customerservicetier"
+  isMultisource: true
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: J4
+        config: {}
+        dataType: VARCHAR
+        description: "Account ID"
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: J3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: J4
+        config: {}
+        dataType: VARCHAR
+        description: "Service Tier"
+        name: SERVICETIER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: SRC_BCTL_CUSTOMERSERVICETIER
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          bc_account: J3
+          bctl_customerservicetier: SRC_BCTL_CUSTOMERSERVICETIER
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: JOIN_BC_ACCOUNT_BILLINGLEVEL
+          - locationName: SRC
+            nodeName: SRC_BCTL_CUSTOMERSERVICETIER
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'JOIN_BC_ACCOUNT_BILLINGLEVEL') }} bc_account
+            LEFT JOIN {{ ref('SRC', 'SRC_BCTL_CUSTOMERSERVICETIER') }} bctl_customerservicetier
+              ON bctl_customerservicetier.ID = bc_account.ServiceTier
+        name: JOIN_BC_ACCOUNT_SERVICETIER
+        noLinkRefs: []
+  name: JOIN_BC_ACCOUNT_SERVICETIER
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
