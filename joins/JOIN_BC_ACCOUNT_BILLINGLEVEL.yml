@@ -1,0 +1,74 @@
+fileVersion: 1
+id: J3
+name: JOIN_BC_ACCOUNT_BILLINGLEVEL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Join with bctl_billinglevel"
+  isMultisource: true
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: J3
+        config: {}
+        dataType: VARCHAR
+        description: "Account ID"
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: J2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2
+          stepCounter: J3
+        config: {}
+        dataType: VARCHAR
+        description: "Billing Level"
+        name: BILLINGLEVEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: SRC_BCTL_BILLINGLEVEL
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          bc_account: J2
+          bctl_billinglevel: SRC_BCTL_BILLINGLEVEL
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: JOIN_BC_ACCOUNT_PARENTACCT
+          - locationName: SRC
+            nodeName: SRC_BCTL_BILLINGLEVEL
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'JOIN_BC_ACCOUNT_PARENTACCT') }} bc_account
+            LEFT JOIN {{ ref('SRC', 'SRC_BCTL_BILLINGLEVEL') }} bctl_billinglevel
+              ON bctl_billinglevel.ID = bc_account.BillingLevel
+        name: JOIN_BC_ACCOUNT_BILLINGLEVEL
+        noLinkRefs: []
+  name: JOIN_BC_ACCOUNT_BILLINGLEVEL
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
