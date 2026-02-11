@@ -1,97 +1,87 @@
-fileVersion: 1
-id: S2
-name: BCTL_ACCOUNTTYPE
+fileVersion: 1.0
+name: SOURCE_BCTL_ACCOUNTTYPE
 operation:
-  database: ""
+  config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: INSERT
+    orderby: false
+    postSQL: ""
+    preSQL: ""
+    refresh_mode: AUTO
+    secureoption: false
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: false
+    warehouseName: PC_COALESCE_WH
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for account type lookup data"
+  description: Source table BCTL_ACCOUNTTYPE from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S2
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: VARCHAR
+        description: Account Type ID
         name: ID
-        nullable: false
-        primaryKey: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C2
-          stepCounter: S2
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: NAME
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: S2
+          columnCounter: 2
+          stepCounter: 1
         config: {}
         dataType: VARCHAR
-        defaultValue: ""
-        description: ""
+        description: Type Code
+        name: TYPECODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3
+          stepCounter: 1
+        config: {}
+        dataType: VARCHAR
+        description: Description
         name: DESCRIPTION
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: S2
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: PRIORITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BCTL_ACCOUNTTYPE
-  schema: ""
-  sqlType: Source
-  type: sourceInput
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BCTL_ACCOUNTTYPE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BCTL_ACCOUNTTYPE') }}
+        name: SOURCE_BCTL_ACCOUNTTYPE
+        noLinkRefs: []
+  name: SOURCE_BCTL_ACCOUNTTYPE
+  overrideSQL: false
+  schema: RAW
+  sqlType: SOURCE
+  type: sql
   version: 1
-
-type: Node
