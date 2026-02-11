@@ -1,177 +1,86 @@
 fileVersion: 1
-id: S10
-name: BC_CONTACT
+id: SOURCE_BC_CONTACT
+name: SOURCE_BC_CONTACT
 operation:
-  database: ""
+  config:
+    insertStrategy: INSERT
+    selectDistinct: false
+  database: PC_COALESCE_DB
   deployEnabled: true
-  description: "Source table for contact information"
+  description: Source table BC_CONTACT from GuideWire
+  isMultisource: false
   locationName: SOURCE
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C1
-          stepCounter: S10
+          columnCounter: 1
+          stepCounter: 1
         config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
+        dataType: NUMBER(38,0)
+        description: Contact ID
         name: ID
-        nullable: false
-        primaryKey: true
+        nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C2
-          stepCounter: S10
+          columnCounter: 2
+          stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: PUBLICID
+        dataType: VARCHAR(200)
+        description: Contact display name
+        name: DISPLAYNAME
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: C3
-          stepCounter: S10
+          columnCounter: 3
+          stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: FIRSTNAME
+        dataType: NUMBER(38,0)
+        description: Primary address ID
+        name: PRIMARYADDRESS
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: 1
             transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C4
-          stepCounter: S10
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: LASTNAME
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C5
-          stepCounter: S10
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: EMAILADDRESS1
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C6
-          stepCounter: S10
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: PRIMARYPHONETYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C7
-          stepCounter: S10
-        config: {}
-        dataType: VARCHAR
-        defaultValue: ""
-        description: ""
-        name: PRIMARYPHONEVALUE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: C8
-          stepCounter: S10
-        config: {}
-        dataType: NUMBER
-        defaultValue: ""
-        description: ""
-        name: ADDRESSID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-
-  name: BC_CONTACT
-  schema: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: BC_CONTACT
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'BC_CONTACT') }}
+        name: SOURCE_BC_CONTACT
+        noLinkRefs: []
+  name: SOURCE_BC_CONTACT
+  overrideSQL: false
+  schema: RAW
   sqlType: Source
-  type: sourceInput
+  type: sql
   version: 1
-
-type: Node
