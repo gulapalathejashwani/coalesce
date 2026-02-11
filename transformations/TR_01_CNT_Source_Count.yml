@@ -1,0 +1,195 @@
+fileVersion: 1
+id: T1
+name: CNT_Source_Count
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: PC_COALESCE_DB
+  deployEnabled: true
+  description: "Row Count transformation - Counts rows from OLE DB Source for auditing. Maps to SSIS variable User::SourceCount"
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - columnReference:
+          columnCounter: 1
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Account Public ID"
+        name: PublicID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 2
+          stepCounter: T1
+        dataType: NUMBER
+        description: "Bean Version"
+        name: BeanVersion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 3
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Account Number"
+        name: AccountNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 4
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Account Type"
+        name: AccountType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 5
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Parent Account Number"
+        name: ParentAccountNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 6
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Billing Level"
+        name: BillingLevel
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 7
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Service Tier"
+        name: ServiceTier
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 8
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Security Zone"
+        name: SecurityZone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 9
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Insured Name"
+        name: InsuredName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 10
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Insured Address"
+        name: InsuredAddress
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 10
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 11
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Delinquency Status"
+        name: DelinquencyStatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 12
+          stepCounter: T1
+        dataType: VARCHAR
+        description: "Account Segment"
+        name: AccountSegment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 12
+                stepCounter: J1
+            transform: ""
+      - columnReference:
+          columnCounter: 13
+          stepCounter: T1
+        dataType: NUMBER
+        description: "Row count for auditing - SSIS Variable: User::SourceCount"
+        name: SourceCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "COUNT(*) OVER ()"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          JOIN_GuideWire_DimBillingAccount: J1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: JOIN_GuideWire_DimBillingAccount
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'JOIN_GuideWire_DimBillingAccount') }} JOIN_GuideWire_DimBillingAccount
+        name: CNT_Source_Count
+        noLinkRefs: []
+  name: CNT_Source_Count
+  overrideSQL: false
+  schema: RAW
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
