@@ -1,21 +1,10 @@
-fileVersion: 1.0
+fileVersion: 1
+id: SOURCE_BCTL_ACCOUNTTYPE
 name: SOURCE_BCTL_ACCOUNTTYPE
 operation:
   config:
-    clusterKey: false
-    downstreamOption: true
-    groupByAll: false
-    initialize: ON_CREATE
     insertStrategy: INSERT
-    orderby: false
-    postSQL: ""
-    preSQL: ""
-    refresh_mode: AUTO
-    secureoption: false
     selectDistinct: false
-    testsEnabled: true
-    truncateBefore: false
-    warehouseName: PC_COALESCE_WH
   database: PC_COALESCE_DB
   deployEnabled: true
   description: Source table BCTL_ACCOUNTTYPE from GuideWire
@@ -25,13 +14,16 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - appliedColumnTests: {}
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
           columnCounter: 1
           stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        description: Account Type ID
+        dataType: NUMBER(38,0)
+        description: Account type ID
         name: ID
         nullable: true
         sourceColumnReferences:
@@ -39,13 +31,16 @@ operation:
               - columnCounter: 1
                 stepCounter: 1
             transform: ""
-      - appliedColumnTests: {}
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
           columnCounter: 2
           stepCounter: 1
         config: {}
-        dataType: VARCHAR
-        description: Type Code
+        dataType: VARCHAR(50)
+        description: Account type code
         name: TYPECODE
         nullable: true
         sourceColumnReferences:
@@ -53,24 +48,11 @@ operation:
               - columnCounter: 2
                 stepCounter: 1
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR
-        description: Description
-        name: DESCRIPTION
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3
-                stepCounter: 1
-            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - customSQL:
+      - aliases: {}
+        customSQL:
           customSQL: ""
         dependencies:
           - locationName: SOURCE
@@ -82,6 +64,6 @@ operation:
   name: SOURCE_BCTL_ACCOUNTTYPE
   overrideSQL: false
   schema: RAW
-  sqlType: SOURCE
+  sqlType: Source
   type: sql
   version: 1
