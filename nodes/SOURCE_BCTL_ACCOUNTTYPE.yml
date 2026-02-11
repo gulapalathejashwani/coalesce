@@ -1,69 +1,54 @@
 fileVersion: 1
-id: SOURCE_BCTL_ACCOUNTTYPE
+id: BCTL_ACCOUNTTYPE_SRC
 name: SOURCE_BCTL_ACCOUNTTYPE
 operation:
   config:
+    clusterKey: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: INSERT
+    refresh_mode: AUTO
+    secureoption: false
     selectDistinct: false
+    warehouseName: PC_COALESCE_WH
   database: PC_COALESCE_DB
   deployEnabled: true
-  description: Source table BCTL_ACCOUNTTYPE from GuideWire
+  description: Source table BCTL_ACCOUNTTYPE from GuideWire database
   isMultisource: false
   locationName: SOURCE
-  materializationType: view
+  materializationType: source
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
+      - columnReference:
           columnCounter: 1
-          stepCounter: 1
-        config: {}
+          stepCounter: BCTL_ACCOUNTTYPE_SRC
         dataType: NUMBER(38,0)
-        description: Account type ID
+        description: Primary Key ID
         name: ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1
-                stepCounter: 1
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
+        nullable: false
+      - columnReference:
           columnCounter: 2
-          stepCounter: 1
-        config: {}
-        dataType: VARCHAR(50)
-        description: Account type code
-        name: TYPECODE
+          stepCounter: BCTL_ACCOUNTTYPE_SRC
+        dataType: VARCHAR(256)
+        description: Account Type Name
+        name: NAME
         nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2
-                stepCounter: 1
-            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
-        customSQL:
+      - customSQL:
           customSQL: ""
         dependencies:
           - locationName: SOURCE
             nodeName: BCTL_ACCOUNTTYPE
         join:
           joinCondition: FROM {{ ref('SOURCE', 'BCTL_ACCOUNTTYPE') }}
-        name: SOURCE_BCTL_ACCOUNTTYPE
-        noLinkRefs: []
+        name: BCTL_ACCOUNTTYPE_SRC
   name: SOURCE_BCTL_ACCOUNTTYPE
   overrideSQL: false
   schema: RAW
-  sqlType: Source
+  sqlType: SOURCE
   type: sql
   version: 1
