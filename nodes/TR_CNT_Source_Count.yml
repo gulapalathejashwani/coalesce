@@ -1,0 +1,53 @@
+fileVersion: 1
+id: T1
+name: CNT_Source_Count
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: "PC_COALESCE_DB"
+  deployEnabled: true
+  description: "Row Count transformation to count source rows for auditing"
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1
+          stepCounter: T1
+        config: {}
+        dataType: NUMBER(38,0)
+        description: "Source row count"
+        name: SOURCE_COUNT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "COUNT(*)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          OLE_SRC_GuideWire: S1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: OLE_SRC_GuideWire
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'OLE_SRC_GuideWire') }} "OLE_SRC_GuideWire"
+        name: CNT_Source_Count
+        noLinkRefs: []
+  name: CNT_Source_Count
+  overrideSQL: false
+  schema: "RAW"
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
